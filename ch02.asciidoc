@@ -1,54 +1,52 @@
-[[ch02_bitcoin_overview]]
-== How Bitcoin Works
+[[ch02_litecoin_overview]]
+== How Litecoin Works
 
 === Transactions, Blocks, Mining, and the Blockchain
 
-((("bitcoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "bitcoin overview", id="DCSover02")))The bitcoin system, unlike traditional banking and payment systems, is based on decentralized trust. Instead of a central trusted authority, in bitcoin, trust is achieved as an emergent property from the interactions of different participants in the bitcoin system. In this chapter, we will examine bitcoin from a high level by tracking a single transaction through the bitcoin system and watch as it becomes "trusted" and accepted by the bitcoin mechanism of distributed consensus and is finally recorded on the blockchain, the distributed ledger of all transactions. Subsequent chapters will delve into the technology behind transactions, the network, and mining.
+((("litecoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "litecoin overview", id="DCSover02")))The litecoin system, unlike traditional banking and payment systems, is based on decentralized trust. Instead of a central trusted authority, in litecoin, trust is achieved as an emergent property from the interactions of different participants in the litecoin system. In this chapter, we will examine litecoin from a high level by tracking a single transaction through the litecoin system and watch as it becomes "trusted" and accepted by the litecoin mechanism of distributed consensus and is finally recorded on the blockchain, the distributed ledger of all transactions. Subsequent chapters will delve into the technology behind transactions, the network, and mining.
 
 ==== Bitcoin Overview
 
-In the overview diagram shown in <<bitcoin-overview>>, we see that the bitcoin system consists of users with wallets containing keys, transactions that are propagated across the network, and miners who produce (through competitive computation) the consensus blockchain, which is the authoritative ledger of all transactions.
+In the overview diagram shown in <<litecoin-overview>>, we see that the litecoin system consists of users with wallets containing keys, transactions that are propagated across the network, and miners who produce (through competitive computation) the consensus blockchain, which is the authoritative ledger of all transactions.
 
 
-((("blockchain explorer sites")))Each example in this chapter is based on an actual transaction made on the bitcoin network, simulating the interactions between the users (Joe, Alice, Bob, and Gopesh) by sending funds from one wallet to another. While tracking a transaction through the bitcoin network to the blockchain, we will use a _blockchain explorer_ site to visualize each step. A blockchain explorer is a web application that operates as a bitcoin search engine, in that it allows you to search for addresses, transactions, and blocks and see the relationships and flows between them.
+((("blockchain explorer sites")))Each example in this chapter is based on an actual transaction made on the litecoin network, simulating the interactions between the users (Joe, Alice, Bob, and Gopesh) by sending funds from one wallet to another. While tracking a transaction through the litecoin network to the blockchain, we will use a _blockchain explorer_ site to visualize each step. A blockchain explorer is a web application that operates as a litecoin search engine, in that it allows you to search for addresses, transactions, and blocks and see the relationships and flows between them.
 
-[[bitcoin-overview]]
-.Bitcoin overview
-image::images/mbc2_0201.png["Bitcoin Overview"]
+[[litecoin-overview]]
+.Litecoin overview
 
-((("Bitcoin Block Explorer")))((("BlockCypher Explorer")))((("blockchain.info")))((("BitPay Insight")))Popular blockchain explorers include:
+((("Litecoin Block Explorer")))((("BlockCypher Explorer")))((("bitinfocharts")))((("Abe Search")))Popular blockchain explorers include:
 
-* https://live.blockcypher.com[BlockCypher Explorer]
-* https://blockchain.info[blockchain.info]
-* https://insight.bitpay.com[BitPay Insight]
+* https://live.blockcypher.com/ltc/[BlockCypher Explorer]
+* https://bitinfocharts.com/litecoin/explorer/[bitinfocharts]
+* http://explorer.litecoin.net/[Abe Search]
 
-Each of these has a search function that can take a bitcoin address, transaction hash, block number, or block hash and retrieve corresponding information from the bitcoin network. With each transaction or block example, we will provide a URL so you can look it up yourself and study it in detail.
+Each of these has a search function that can take a litecoin address, transaction hash, block number, or block hash and retrieve corresponding information from the litecoin network. With each transaction or block example, we will provide a URL so you can look it up yourself and study it in detail.
 
 
 [[cup_of_coffee]]
 ==== Buying a Cup of Coffee
 
-((("use cases", "buying coffee", id="UCcoffee02")))Alice, introduced in the previous chapter, is a new user who has just acquired her first bitcoin. In <<getting_first_bitcoin>>, Alice met with her friend Joe to exchange some cash for bitcoin. The transaction created by Joe funded Alice's wallet with 0.10 BTC. Now Alice will make her first retail transaction, buying a cup of coffee at Bob's coffee shop in Palo Alto, California.
+((("use cases", "buying coffee", id="UCcoffee02")))Alice, introduced in the previous chapter, is a new user who has just acquired her first litecoin. In <<getting_first_litecoin>>, Alice met with her friend Joe to exchange some cash for litecoin. The transaction created by Joe funded Alice's wallet with 0.10 LTC. Now Alice will make her first retail transaction, buying a cup of coffee at Bob's coffee shop in Palo Alto, California.
 
-((("exchange rates", "determining")))Bob's Cafe recently started accepting bitcoin payments by adding a bitcoin option to its point-of-sale system. The prices at Bob's Cafe are listed in the local currency (US dollars), but at the register, customers have the option of paying in either dollars or bitcoin. Alice places her order for a cup of coffee and Bob enters it into the register, as he does for all transactions.  The point-of-sale system automatically converts the total price from US dollars to bitcoin at the prevailing market rate and displays the price in both currencies:
+((("exchange rates", "determining")))Bob's Cafe recently started accepting litecoin payments by adding a litecoin option to its point-of-sale system. The prices at Bob's Cafe are listed in the local currency (US dollars), but at the register, customers have the option of paying in either dollars or litecoin. Alice places her order for a cup of coffee and Bob enters it into the register, as he does for all transactions.  The point-of-sale system automatically converts the total price from US dollars to litecoin at the prevailing market rate and displays the price in both currencies:
 
 ----
 Total:
 $1.50 USD
-0.015 BTC
+0.015 LTC
 ----
 
-
-((("millibits")))Bob says, "That's one-dollar-fifty, or fifteen millibits."
+((("lites")))Bob says, "That's one-dollar-fifty, or fifteen lites."
 
 ((("payment requests")))((("QR codes", "payment requests")))Bob's point-of-sale system will also automatically create a special QR code containing a _payment request_ (see <<payment-request-QR>>).
 
-Unlike a QR code that simply contains a destination bitcoin address, a payment request is a QR-encoded URL that contains a destination address, a payment amount, and a generic description such as "Bob's Cafe." This allows a bitcoin wallet application to prefill the information used to send the payment while showing a human-readable description to the user. You can scan the QR code with a bitcoin wallet application to see what Alice would see.
+Unlike a QR code that simply contains a destination litecoin address, a payment request is a QR-encoded URL that contains a destination address, a payment amount, and a generic description such as "Bob's Cafe." This allows a litecoin wallet application to prefill the information used to send the payment while showing a human-readable description to the user. You can scan the QR code with a litecoin wallet application to see what Alice would see.
 
 
 [[payment-request-QR]]
 .Payment request QR code
-image::images/mbc2_0202.png["payment-request"]
+![ltc invoice](https://user-images.githubusercontent.com/32662508/48213328-62c8d900-e332-11e8-896e-e2a29494c832.jpg)
 
 [TIP]
 ====
@@ -57,47 +55,43 @@ image::images/mbc2_0202.png["payment-request"]
 [[payment-request-URL]]
 .The payment request QR code encodes the following URL, defined in BIP-21:
 ----
-bitcoin:1GdK9UzpHBzqzX2A9JFP3Di4weBwqgmoQA?
+bitcoin:LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2?
 amount=0.015&
-label=Bob%27s%20Cafe&
-message=Purchase%20at%20Bob%27s%20Cafe
 
 Components of the URL
 
-A bitcoin address: "1GdK9UzpHBzqzX2A9JFP3Di4weBwqgmoQA"
+A bitcoin address: "LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2"
 The payment amount: "0.015"
-A label for the recipient address: "Bob's Cafe"
-A description for the payment: "Purchase at Bob's Cafe"
 ----
 
-Alice uses her smartphone to scan the barcode on display. Her smartphone shows a payment of +0.0150 BTC+ to +Bob's Cafe+ and she selects Send to authorize the payment. Within a few seconds (about the same amount of time as a credit card authorization), Bob sees the transaction on the register, completing the transaction.
+Alice uses her smartphone to scan the barcode on display. Her smartphone shows a payment of +0.0150 LTC+ to +Bob's Cafe+ and she selects Send to authorize the payment. Within a few seconds (about the same amount of time as a credit card authorization), Bob sees the transaction on the register, completing the transaction.
 
 In the following sections, we will examine this transaction in more detail. We'll see how Alice's wallet constructed it, how it was propagated across the network, how it was verified, and finally, how Bob can spend that amount in subsequent transactions.
 
 [NOTE]
 ====
-((("fractional values")))((("milli-bitcoin")))((("satoshis")))The bitcoin network can transact in fractional values, e.g., from millibitcoin (1/1000th of a bitcoin) down to 1/100,000,000th of a bitcoin, which is known as a satoshi.  Throughout this book, we’ll use the term “bitcoin” to refer to any quantity of bitcoin currency, from the smallest unit (1 satoshi) to the total number (21,000,000) of all bitcoin that will ever be mined.
+((("fractional values")))((("lites")))((("litoshis")))The litecoin network can transact in fractional values, e.g., from lites (1/1000th of a litecoin) down to 1/100,000,000th of a litecoin, which is known as a litoshi.  Throughout this book, we’ll use the term “litecoin” to refer to any quantity of litecoin currency, from the smallest unit (1 litoshi) to the total number (84,000,000) of all litecoin that will ever be mined.
 ====
 
 You can examine Alice's transaction to Bob's Cafe on the blockchain using a block explorer site (<<view_alice_transaction>>):
 
 [[view_alice_transaction]]
-.View Alice's transaction on https://blockchain.info/tx/0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57286c345c2f2[blockchain.info]
+.View Alice's transaction on https://live.blockcypher.com/ltc/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e[live.blockcypher.comltc]
 ====
 ----
-https://blockchain.info/tx/0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57286c345c2f2
+https://live.blockcypher.com/ltc/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e
 ----
 ====
 
-=== Bitcoin Transactions
+=== Litecoin Transactions
 
-((("transactions", "defined")))In simple terms, a transaction tells the network that the owner of some bitcoin value has authorized the transfer of that value to another owner. The new owner can now spend the bitcoin by creating another transaction that authorizes the transfer to another owner, and so on, in a chain of ownership.
+((("transactions", "defined")))In simple terms, a transaction tells the network that the owner of some litecoin value has authorized the transfer of that value to another owner. The new owner can now spend the litecoin by creating another transaction that authorizes the transfer to another owner, and so on, in a chain of ownership.
 
 ==== Transaction Inputs and Outputs
 
-((("transactions", "overview of", id="Tover02")))((("outputs and inputs", "basics of")))Transactions are like lines in a double-entry bookkeeping ledger.  Each transaction contains one or more "inputs," which are like debits against a bitcoin account. On the other side of the transaction, there are one or more "outputs," which are like credits added to a bitcoin account. ((("fees", "transaction fees")))The inputs and outputs (debits and credits) do not necessarily add up to the same amount. Instead, outputs add up to slightly less than inputs and the difference represents an implied _transaction fee_, which is a small payment collected by the miner who includes the transaction in the ledger. A bitcoin transaction is shown as a bookkeeping ledger entry in <<transaction-double-entry>>.
+((("transactions", "overview of", id="Tover02")))((("outputs and inputs", "basics of")))Transactions are like lines in a double-entry bookkeeping ledger.  Each transaction contains one or more "inputs," which are like debits against a litecoin account. On the other side of the transaction, there are one or more "outputs," which are like credits added to a litecoin account. ((("fees", "transaction fees")))The inputs and outputs (debits and credits) do not necessarily add up to the same amount. Instead, outputs add up to slightly less than inputs and the difference represents an implied _transaction fee_, which is a small payment collected by the miner who includes the transaction in the ledger. A litecoin transaction is shown as a bookkeeping ledger entry in <<transaction-double-entry>>.
 
-The transaction also contains proof of ownership for each amount of bitcoin (inputs) whose value is being spent, in the form of a digital signature from the owner, which can be independently validated by anyone. ((("spending bitcoin", "defined")))In bitcoin terms, "spending" is signing a transaction that transfers value from a previous transaction over to a new owner identified by a bitcoin address.
+The transaction also contains proof of ownership for each amount of litecoin (inputs) whose value is being spent, in the form of a digital signature from the owner, which can be independently validated by anyone. ((("spending litecoin", "defined")))In litecoin terms, "spending" is signing a transaction that transfers value from a previous transaction over to a new owner identified by a litecoin address. Below is a diagram from Mastering Bitcoin that depicts double-entry bookkeeping.
 
 [[transaction-double-entry]]
 .Transaction as double-entry bookkeeping
@@ -105,7 +99,7 @@ image::images/mbc2_0203.png["Transaction Double-Entry"]
 
 ==== Transaction Chains
 
-((("chain of transactions")))Alice's payment to Bob's Cafe uses a previous transaction's output as its input. In the previous chapter, Alice received bitcoin from her friend Joe in return for cash. That transaction created a bitcoin value locked by Alice's key. Her new transaction to Bob's Cafe references the previous transaction as an input and creates new outputs to pay for the cup of coffee and receive change. The transactions form a chain, where the inputs from the latest transaction correspond to outputs from previous transactions. Alice's key provides the signature that unlocks those previous transaction outputs, thereby proving to the bitcoin network that she owns the funds. She attaches the payment for coffee to Bob's address, thereby "encumbering" that output with the requirement that Bob produces a signature in order to spend that amount. This represents a transfer of value between Alice and Bob. This chain of transactions, from Joe to Alice to Bob, is illustrated in <<blockchain-mnemonic>>.
+((("chain of transactions")))Alice's payment to Bob's Cafe uses a previous transaction's output as its input. In the previous chapter, Alice received litecoin from her friend Joe in return for cash. That transaction created a litecoin value locked by Alice's key. Her new transaction to Bob's Cafe references the previous transaction as an input and creates new outputs to pay for the cup of coffee and receive change. The transactions form a chain, where the inputs from the latest transaction correspond to outputs from previous transactions. Alice's key provides the signature that unlocks those previous transaction outputs, thereby proving to the litecoin network that she owns the funds. She attaches the payment for coffee to Bob's address, thereby "encumbering" that output with the requirement that Bob produces a signature in order to spend that amount. This represents a transfer of value between Alice and Bob. This chain of transactions, from Joe to Alice to Bob, is illustrated in <<blockchain-mnemonic>>.  The diagrams below are also taken from Mastering Bitcoin.
 
 [[blockchain-mnemonic]]
 .A chain of transactions, where the output of one transaction is the input of the next transaction
@@ -113,11 +107,11 @@ image::images/mbc2_0204.png["Transaction chain"]
 
 ==== Making Change
 
-((("change, making")))((("change addresses")))((("addresses", "change addresses")))Many bitcoin transactions will include outputs that reference both an address of the new owner and an address of the current owner, called the _change_ address. This is because transaction inputs, like currency notes, cannot be divided. If you purchase a $5 US dollar item in a store but use a $20 US dollar bill to pay for the item, you expect to receive $15 US dollars in change. The same concept applies to bitcoin transaction inputs. If you purchased an item that costs 5 bitcoin but only had a 20 bitcoin input to use, you would send one output of 5 bitcoin to the store owner and one output of 15 bitcoin back to yourself as change (less any applicable transaction fee). Importantly, the change address does not have to be the same address as that of the input and for privacy reasons is often a new address from the owner's wallet.
+((("change, making")))((("change addresses")))((("addresses", "change addresses")))Many litecoin transactions will include outputs that reference both an address of the new owner and an address of the current owner, called the _change_ address. This is because transaction inputs, like currency notes, cannot be divided. If you purchase a $5 US dollar item in a store but use a $20 US dollar bill to pay for the item, you expect to receive $15 US dollars in change. The same concept applies to litecoin transaction inputs. If you purchased an item that costs 5 litecoin but only had a 20 litecoin input to use, you would send one output of 5 litecoin to the store owner and one output of 15 litecoin back to yourself as change (less any applicable transaction fee). Importantly, the change address does not have to be the same address as that of the input and for privacy reasons is often a new address from the owner's wallet.
 
-Different wallets may use different strategies when aggregating inputs to make a payment requested by the user. They might aggregate many small inputs, or use one that is equal to or larger than the desired payment. Unless the wallet can aggregate inputs in such a way to exactly match the desired payment plus transaction fees, the wallet will need to generate some change. This is very similar to how people handle cash. If you always use the largest bill in your pocket, you will end up with a pocket full of loose change. If you only use the loose change, you'll always have only big bills. People subconsciously find a balance between these two extremes, and bitcoin wallet developers strive to program this balance.
+Different wallets may use different strategies when aggregating inputs to make a payment requested by the user. They might aggregate many small inputs, or use one that is equal to or larger than the desired payment. Unless the wallet can aggregate inputs in such a way to exactly match the desired payment plus transaction fees, the wallet will need to generate some change. This is very similar to how people handle cash. If you always use the largest bill in your pocket, you will end up with a pocket full of loose change. If you only use the loose change, you'll always have only big bills. People subconsciously find a balance between these two extremes, and litecoin wallet developers strive to program this balance.
 
-((("transactions", "defined")))((("outputs and inputs", "defined")))((("inputs", see="outputs and inputs")))In summary, _transactions_ move value from _transaction inputs_ to _transaction outputs_. An input is a reference to a previous transaction's output, showing where the value is coming from. A transaction output directs a specific value to a new owner's bitcoin address and can include a change output back to the original owner. Outputs from one transaction can be used as inputs in a new transaction, thus creating a chain of ownership as the value is moved from owner to owner (see <<blockchain-mnemonic>>).
+((("transactions", "defined")))((("outputs and inputs", "defined")))((("inputs", see="outputs and inputs")))In summary, _transactions_ move value from _transaction inputs_ to _transaction outputs_. An input is a reference to a previous transaction's output, showing where the value is coming from. A transaction output directs a specific value to a new owner's litecoin address and can include a change output back to the original owner. Outputs from one transaction can be used as inputs in a new transaction, thus creating a chain of ownership as the value is moved from owner to owner (see <<blockchain-mnemonic>>).
 
 ==== Common Transaction Forms
 
@@ -133,7 +127,7 @@ Another common form of transaction is one that aggregates several inputs into a 
 .Transaction aggregating funds
 image::images/mbc2_0206.png["Aggregating Transaction"]
 
-Finally, another transaction form that is seen often on the bitcoin ledger is a transaction that distributes one input to multiple outputs representing multiple recipients (see <<transaction-distributing>>). This type of transaction is sometimes used by commercial entities to distribute funds, such as when processing payroll payments to multiple employees.((("", startref="Tover02")))
+Finally, another transaction form that is seen often on the litecoin ledger is a transaction that distributes one input to multiple outputs representing multiple recipients (see <<transaction-distributing>>). This type of transaction is sometimes used by commercial entities to distribute funds, such as when processing payroll payments to multiple employees.((("", startref="Tover02")))
 
 [[transaction-distributing]]
 .Transaction distributing funds
@@ -141,16 +135,16 @@ image::images/mbc2_0207.png["Distributing Transaction"]
 
 === Constructing a Transaction
 
-((("transactions", "constructing", id="Tconstruct02")))((("wallets", "constructing transactions")))Alice's wallet application contains all the logic for selecting appropriate inputs and outputs to build a transaction to Alice's specification. Alice only needs to specify a destination and an amount, and the rest happens in the wallet application without her seeing the details. Importantly, a wallet application can construct transactions even if it is completely offline. Like writing a check at home and later sending it to the bank in an envelope, the transaction does not need to be constructed and signed while connected to the bitcoin network.
+((("transactions", "constructing", id="Tconstruct02")))((("wallets", "constructing transactions")))Alice's wallet application contains all the logic for selecting appropriate inputs and outputs to build a transaction to Alice's specification. Alice only needs to specify a destination and an amount, and the rest happens in the wallet application without her seeing the details. Importantly, a wallet application can construct transactions even if it is completely offline. Like writing a check at home and later sending it to the bank in an envelope, the transaction does not need to be constructed and signed while connected to the litecoin network.
 
 ==== Getting the Right Inputs
 
-((("outputs and inputs", "locating and tracking inputs")))Alice's wallet application will first have to find inputs that can pay the amount she wants to send to Bob. Most wallets keep track of all the available outputs belonging to addresses in the wallet. Therefore, Alice's wallet would contain a copy of the transaction output from Joe's transaction, which was created in exchange for cash (see <<getting_first_bitcoin>>). A bitcoin wallet application that runs as a full-node client actually contains a copy of every unspent output from every transaction in the blockchain. This allows a wallet to construct transaction inputs as well as quickly verify incoming transactions as having correct inputs. However, because a full-node client takes up a lot of disk space, most user wallets run "lightweight" clients that track only the user's own unspent outputs.
+((("outputs and inputs", "locating and tracking inputs")))Alice's wallet application will first have to find inputs that can pay the amount she wants to send to Bob. Most wallets keep track of all the available outputs belonging to addresses in the wallet. Therefore, Alice's wallet would contain a copy of the transaction output from Joe's transaction, which was created in exchange for cash (see <<getting_first_litecoin>>). A litecoin wallet application that runs as a full-node client actually contains a copy of every unspent output from every transaction in the blockchain. This allows a wallet to construct transaction inputs as well as quickly verify incoming transactions as having correct inputs. However, because a full-node client takes up a lot of disk space, most user wallets run "lightweight" clients that track only the user's own unspent outputs.
 
-If the wallet application does not maintain a copy of unspent transaction outputs, it can query the bitcoin network to retrieve this information using a variety of APIs available by different providers or by asking a full-node using an application programming interface (API) call. <<example_2-2>> shows an API request, constructed as an HTTP GET command to a specific URL. This URL will return all the unspent transaction outputs for an address, giving any application the information it needs to construct transaction inputs for spending. We use the simple command-line HTTP client _cURL_ to retrieve the response.
+If the wallet application does not maintain a copy of unspent transaction outputs, it can query the litecoin network to retrieve this information using a variety of APIs available by different providers or by asking a full-node using an application programming interface (API) call. <<example_2-2>> shows an API request, constructed as an HTTP GET command to a specific URL. This URL will return all the unspent transaction outputs for an address, giving any application the information it needs to construct transaction inputs for spending. We use the simple command-line HTTP client _cURL_ to retrieve the response.
 
 [[example_2-2]]
-.Look up all the unspent outputs for Alice's bitcoin address
+.Look up all the unspent outputs for Alice's litecoin address
 ====
 [source,bash]
 ----
