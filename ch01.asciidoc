@@ -2,7 +2,17 @@
 [[ch01_intro_what_is_bitcoin]]
 == Introduction
 
-=== What Is Bitcoin?
+=== What Is Litecoin?
+
+Litecoin is the silver to bitcoin's gold.
+
+In 2011, there were many projects that tried to replicate the success of bitcoin by copying its codebase, making a few adjustments, and sharing it with the community.  Some where genuine attempts at innovation.  Others were more selfish in nature as the creators would mine a significant portion of the new coin's supply before going public, essentially printing free money for themselves.  In light of this, Charlie Lee and others in the community set out to create a real alternative currency that was similar to bitcoin in order to complement it.
+
+On October 9, 2011 Charlie made an announcement on [bitcointalk.org](https://bitcointalk.org/index.php?topic=47417.0) explaining the adjustments he made to bitcoin's codebase with the goal of facilitating a fair and wide distribution of litecoin to anyone who wanted to participate.  Finally on October 7, 2011, litecoin's codebase was released on github for anyone to use.
+
+However before we can properly understand litecoin, we must first understand bitcoin.
+
+=== What Is Bitcoin
 
 ((("bitcoin", "defined", id="GSdefine01")))Bitcoin is a collection of concepts and technologies that form the basis of a digital money ecosystem.  Units of currency called bitcoin are used to store and transmit value among participants in the bitcoin network.  Bitcoin users communicate with each other using the bitcoin protocol primarily via the internet, although other transport networks can also be used. The bitcoin protocol stack, available as open source software, can be run on a wide range of computing devices, including laptops and smartphones, making the technology easily accessible.
 
