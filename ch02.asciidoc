@@ -15,9 +15,9 @@ In the overview diagram shown in <<litecoin-overview>>, we see that the litecoin
 [[litecoin-overview]]
 .Litecoin overview
 
-((("Litecoin Block Explorer")))((("BlockCypher Explorer")))((("bitinfocharts")))((("Abe Search")))Popular blockchain explorers include:
+((("Litecoin Block Explorer")))((("Insight")))((("bitinfocharts")))((("Abe Search")))Popular blockchain explorers include:
 
-* https://live.blockcypher.com/ltc/[BlockCypher Explorer]
+* https://insight.litecore.io/[Insight]
 * https://bitinfocharts.com/litecoin/explorer/[bitinfocharts]
 * http://explorer.litecoin.net/[Abe Search]
 
@@ -76,10 +76,10 @@ In the following sections, we will examine this transaction in more detail. We'l
 You can examine Alice's transaction to Bob's Cafe on the blockchain using a block explorer site (<<view_alice_transaction>>):
 
 [[view_alice_transaction]]
-.View Alice's transaction on https://live.blockcypher.com/ltc/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e[live.blockcypher.comltc]
+.View Alice's transaction on https://insight.litecore.io/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e[https://insight.litecore.io/]
 ====
 ----
-https://live.blockcypher.com/ltc/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e
+https://insight.litecore.io/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e
 ----
 ====
 
