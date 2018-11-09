@@ -5,7 +5,7 @@
 
 ((("litecoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "litecoin overview", id="DCSover02")))The litecoin system, unlike traditional banking and payment systems, is based on decentralized trust. Instead of a central trusted authority, in litecoin, trust is achieved as an emergent property from the interactions of different participants in the litecoin system. In this chapter, we will examine litecoin from a high level by tracking a single transaction through the litecoin system and watch as it becomes "trusted" and accepted by the litecoin mechanism of distributed consensus and is finally recorded on the blockchain, the distributed ledger of all transactions. Subsequent chapters will delve into the technology behind transactions, the network, and mining.
 
-==== Bitcoin Overview
+==== Litecoin Overview
 
 In the overview diagram shown in <<litecoin-overview>>, we see that the litecoin system consists of users with wallets containing keys, transactions that are propagated across the network, and miners who produce (through competitive computation) the consensus blockchain, which is the authoritative ledger of all transactions.
 
@@ -55,12 +55,12 @@ Unlike a QR code that simply contains a destination litecoin address, a payment 
 [[payment-request-URL]]
 .The payment request QR code encodes the following URL, defined in BIP-21:
 ----
-bitcoin:LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2?
+litecoin:LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2?
 amount=0.015&
 
 Components of the URL
 
-A bitcoin address: "LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2"
+A litecoin address: "LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2"
 The payment amount: "0.015"
 ----
 
