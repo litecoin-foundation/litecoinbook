@@ -789,7 +789,7 @@ So does a vanity address increase security? If Eugenia generates the vanity addr
 [[paper_wallets]]
 ==== Paper Wallets
 
-((("keys and addresses", "advanced forms", "paper wallets")))((("paper wallets", id="paperw04")))((("wallets", "types of", "paper wallets", id="Wpaper04")))Paper wallets are bitcoin private keys printed on paper. Often the paper wallet also includes the corresponding bitcoin address for convenience, but this is not necessary because it can be derived from the private key. Paper wallets are a very effective way to create backups or offline bitcoin storage, also known as "cold storage." As a backup mechanism, a paper wallet can provide security against the loss of key due to a computer mishap such as a hard-drive failure, theft, or accidental deletion. As a "cold storage" mechanism, if the paper wallet keys are generated offline and never stored on a computer system, they are much more secure against hackers, keyloggers, and other online computer threats.
+((("keys and addresses", "advanced forms", "paper wallets")))((("paper wallets", id="paperw04")))((("wallets", "types of", "paper wallets", id="Wpaper04")))Paper wallets are litecoin private keys printed on paper. Often the paper wallet also includes the corresponding litecoin address for convenience, but this is not necessary because it can be derived from the private key. Paper wallets are a very effective way to create backups or offline litecoin storage, also known as "cold storage." As a backup mechanism, a paper wallet can provide security against the loss of key due to a computer mishap such as a hard-drive failure, theft, or accidental deletion. As a "cold storage" mechanism, if the paper wallet keys are generated offline and never stored on a computer system, they are much more secure against hackers, keyloggers, and other online computer threats.
 
 Paper wallets come in many shapes, sizes, and designs, but at a very basic level are just a key and an address printed on paper. <<table_4-14>> shows the simplest form of a paper wallet.
 
@@ -798,39 +798,33 @@ Paper wallets come in many shapes, sizes, and designs, but at a very basic level
 [options="header"]
 |=======================
 |Public address|Private key (WIF)
-|1424C2F4bC9JidNjjTUZCbUxv6Sa1Mt62x|5J3mBbAH58CpQ3Y5RNJpUKPE62SQ5tfcvU2JpbnkeyhfsYB1Jcn
+|LSks3KVGcn1BXYe9GCb162vAb6S1mRARuw|6vc5KrW9eMwLYQFgu5mbae5q3AA5DPUpA9Kj84F3Q8szuvG5JVL
 |=======================
 
 
-Paper wallets can be generated easily using a tool such as the client-side JavaScript generator at _bitaddress.org_. This page contains all the code necessary to generate keys and paper wallets, even while completely disconnected from the internet. To use it, save the HTML page on your local drive or on an external USB flash drive. Disconnect from the internet and open the file in a browser. Even better, boot your computer using a pristine operating system, such as a CD-ROM bootable Linux OS. Any keys generated with this tool while offline can be printed on a local printer over a USB cable (not wirelessly), thereby creating paper wallets whose keys exist only on the paper and have never been stored on any online system. Put these paper wallets in a fireproof safe and "send" bitcoin to their bitcoin address, to implement a simple yet highly effective "cold storage" solution. <<paper_wallet_simple>> shows a paper wallet generated from the bitaddress.org site.
+Paper wallets can be generated easily using a tool such as the client-side JavaScript generator at _liteaddress.org_. This page contains all the code necessary to generate keys and paper wallets, even while completely disconnected from the internet. To use it, save the HTML page on your local drive or on an external USB flash drive. Disconnect from the internet and open the file in a browser. Even better, boot your computer using a pristine operating system, such as a CD-ROM bootable Linux OS. Any keys generated with this tool while offline can be printed on a local printer over a USB cable (not wirelessly), thereby creating paper wallets whose keys exist only on the paper and have never been stored on any online system. Put these paper wallets in a fireproof safe and "send" litecoin to their litecoin address, to implement a simple yet highly effective "cold storage" solution. <<paper_wallet_simple>> shows a paper wallet generated from the liteaddress.org site.
 
 [[paper_wallet_simple]]
-.An example of a simple paper wallet from bitaddress.org
-image::images/mbc2_0408.png[]
+.An example of a simple paper wallet from liteaddress.org
+![paper wallet liteaddress](https://user-images.githubusercontent.com/32662508/48246024-917e9800-e3a2-11e8-945e-a0c15f3182b5.png)
 
-((("bitcoin improvement proposals", "Encrypted Private Keys (BIP-38)")))The disadvantage of a simple paper wallet system is that the printed keys are vulnerable to theft. A thief who is able to gain access to the paper can either steal it or photograph the keys and take control of the bitcoin locked with those keys. A more sophisticated paper wallet storage system uses BIP-38 encrypted private keys. The keys printed on the paper wallet are protected by a passphrase that the owner has memorized. Without the passphrase, the encrypted keys are useless. Yet, they still are superior to a passphrase-protected wallet because the keys have never been online and must be physically retrieved from a safe or other physically secured storage. <<paper_wallet_encrypted>> shows a paper wallet with an encrypted private key (BIP-38) created on the bitaddress.org site.
+((("bitcoin improvement proposals", "Encrypted Private Keys (BIP-38)")))The disadvantage of a simple paper wallet system is that the printed keys are vulnerable to theft. A thief who is able to gain access to the paper can either steal it or photograph the keys and take control of the litecoin locked with those keys. A more sophisticated paper wallet storage system uses BIP-38 encrypted private keys. The keys printed on the paper wallet are protected by a passphrase that the owner has memorized. Without the passphrase, the encrypted keys are useless. Yet, they still are superior to a passphrase-protected wallet because the keys have never been online and must be physically retrieved from a safe or other physically secured storage. <<paper_wallet_encrypted>> shows a paper wallet with an encrypted private key (BIP-38) created on the liteaddress.org site.
 
 [[paper_wallet_encrypted]]
-.An example of an encrypted paper wallet from bitaddress.org. The passphrase is "test."
-image::images/mbc2_0409.png[]
+.An example of an encrypted paper wallet from liteaddress.org. The passphrase is "chikun."
+![encrypted paper wallet](https://user-images.githubusercontent.com/32662508/48246090-de626e80-e3a2-11e8-9dec-ea77c9f5eb6e.png)
 
 [WARNING]
 ====
 Although you can deposit funds into a paper wallet several times, you should withdraw all funds only once, spending everything. This is because in the process of unlocking and spending funds some wallets might generate a change address if you spend less than the whole amount. Additionally, if the computer you use to sign the transaction is compromised, you risk exposing the private key. By spending the entire balance of a paper wallet only once, you reduce the risk of key compromise. If you need only a small amount, send any remaining funds to a new paper wallet in the same transaction.
 ====
 
-Paper wallets come in many designs and sizes, with many different features. Some are intended to be given as gifts and have seasonal themes, such as Christmas and New Year's themes. Others are designed for storage in a bank vault or safe with the private key hidden in some way, either with opaque scratch-off stickers, or folded and sealed with tamper-proof adhesive foil. Figures pass:[<a data-type="xref" href="#paper_wallet_bpw" data-xrefstyle="select: labelnumber">#paper_wallet_bpw</a>] through pass:[<a data-type="xref" href="#paper_wallet_spw" data-xrefstyle="select: labelnumber">#paper_wallet_spw</a>] show various examples of paper wallets with security and backup features.
+Paper wallets come in many designs and sizes, with many different features. Some are intended to be given as gifts and have seasonal themes, such as Christmas and New Year's themes. Others are designed for storage in a bank vault or safe with the private key hidden in some way, either with opaque scratch-off stickers, or folded and sealed with tamper-proof adhesive foil. Figures pass:[<a data-type="xref" href="#paper_wallet_bpw" data-xrefstyle="select: labelnumber">#paper_wallet_bpw</a>] and:[<a data-type="xref" href="#paper_wallet_bpw_folded" data-xrefstyle="select: labelnumber">#paper_wallet_spw</a>] show an example of how a foldable paper wallet adds extra security to a paper wallet.
 
 [[paper_wallet_bpw]]
-.An example of a paper wallet from bitcoinpaperwallet.com with the private key on a folding flap
-image::images/mbc2_0410.png[]
+.An example of a paper wallet from https://bitcoinpaperwallet.com/litecoin-paper-wallet-generator/ with the private key on a folding flap
+![foldable paper wallet](https://user-images.githubusercontent.com/32662508/48246213-65174b80-e3a3-11e8-868d-6b59c2522a18.png)
 
 [[paper_wallet_bpw_folded]]
-.The bitcoinpaperwallet.com paper wallet with the private key concealed
-image::images/mbc2_0411.png[]
-
-Other designs feature additional copies of the key and address, in the form of detachable stubs similar to ticket stubs, allowing you to store multiple copies to protect against fire, flood, or other natural disasters.((("", startref="KAadvanced04")))((("", startref="Wpaper04")))((("", startref="paperw04")))
-
-[[paper_wallet_spw]]
-.An example of a paper wallet with additional copies of the keys on a backup "stub"
-image::images/mbc2_0412.png[]
+.The bitcoinpaperwallet.com/litecoin-paper-wallet-generator/ paper wallet with the private key concealed
+![folded paper wallet](https://user-images.githubusercontent.com/32662508/48246294-c63f1f00-e3a3-11e8-9116-d6065610ccb3.png)
