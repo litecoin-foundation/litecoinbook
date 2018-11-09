@@ -110,7 +110,7 @@ $ bx seed | bx ec-new | bx ec-to-wif
 
 [TIP]
 ====
-Elliptic curve multiplication is a type of function that cryptographers call a "trap door" function: it is easy to do in one direction (multiplication) and impossible to do in the reverse direction (division). The owner of the private key can easily create the public key and then share it with the world knowing that no one can reverse the function and calculate the private key from the public key. This mathematical trick becomes the basis for unforgeable and secure digital signatures that prove ownership of bitcoin funds.
+Elliptic curve multiplication is a type of function that cryptographers call a "trap door" function: it is easy to do in one direction (multiplication) and impossible to do in the reverse direction (division). The owner of the private key can easily create the public key and then share it with the world knowing that no one can reverse the function and calculate the private key from the public key. This mathematical trick becomes the basis for unforgeable and secure digital signatures that prove ownership of litecoin funds.
 ====
 
 [[elliptic_curve]]
@@ -125,7 +125,7 @@ Elliptic curve multiplication is a type of function that cryptographers call a "
 .An elliptic curve
 image::images/mbc2_0402.png["ecc-curve"]
 
-Bitcoin uses a specific elliptic curve and set of mathematical constants, as defined in a standard called +secp256k1+, established by the National Institute of Standards and Technology (NIST). The +secp256k1+ curve is defined by the following function, which produces an elliptic curve:
+Litecoin uses a specific elliptic curve and set of mathematical constants, as defined in a standard called +secp256k1+, established by the National Institute of Standards and Technology (NIST). The +secp256k1+ curve is defined by the following function, which produces an elliptic curve:
 
 [latexmath]
 ++++
@@ -145,7 +145,7 @@ or
 
 The _mod p_ (modulo prime number p) indicates that this curve is over a finite field of prime order _p_, also written as latexmath:[\( \mathbb{F}_p \)], where p = 2^256^ – 2^32^ – 2^9^ – 2^8^ – 2^7^ – 2^6^ – 2^4^ – 1, a very large prime number.
 
-Because this curve is defined over a finite field of prime order instead of over the real numbers, it looks like a pattern of dots scattered in two dimensions, which makes it difficult to visualize. However, the math is identical to that of an elliptic curve over real numbers. As an example, <<ecc-over-F17-math>> shows the same elliptic curve over a much smaller finite field of prime order 17, showing a pattern of dots on a grid. The +secp256k1+ bitcoin elliptic curve can be thought of as a much more complex pattern of dots on a unfathomably large grid.
+Because this curve is defined over a finite field of prime order instead of over the real numbers, it looks like a pattern of dots scattered in two dimensions, which makes it difficult to visualize. However, the math is identical to that of an elliptic curve over real numbers. As an example, <<ecc-over-F17-math>> shows the same elliptic curve over a much smaller finite field of prime order 17, showing a pattern of dots on a grid. The +secp256k1+ litecoin elliptic curve can be thought of as a much more complex pattern of dots on a unfathomably large grid.
 
 [[ecc-over-F17-math]]
 [role="smallersixty"]
@@ -197,7 +197,7 @@ Now that we have defined addition, we can define multiplication in the standard 
 [[public_key_derivation]]
 ==== Generating a Public Key
 
-((("keys and addresses", "overview of", "public key generation")))((("generator point")))Starting with a private key in the form of a randomly generated number _k_, we multiply it by a predetermined point on the curve called the _generator point_ _G_ to produce another point somewhere else on the curve, which is the corresponding public key _K_. The generator point is specified as part of the +secp256k1+ standard and is always the same for all keys in bitcoin:
+((("keys and addresses", "overview of", "public key generation")))((("generator point")))Starting with a private key in the form of a randomly generated number _k_, we multiply it by a predetermined point on the curve called the _generator point_ _G_ to produce another point somewhere else on the curve, which is the corresponding public key _K_. The generator point is specified as part of the +secp256k1+ standard and is always the same for all keys in litecoin:
 
 [latexmath]
 ++++
@@ -206,7 +206,7 @@ Now that we have defined addition, we can define multiplication in the standard 
 \end{equation}
 ++++
 
-where _k_ is the private key, _G_ is the generator point, and _K_ is the resulting public key, a point on the curve. Because the generator point is always the same for all bitcoin users, a private key _k_ multiplied with _G_ will always result in the same public key _K_. The relationship between _k_ and _K_ is fixed, but can only be calculated in one direction, from _k_ to _K_. That's why a bitcoin address (derived from _K_) can be shared with anyone and does not reveal the user's private key (_k_).
+where _k_ is the private key, _G_ is the generator point, and _K_ is the resulting public key, a point on the curve. Because the generator point is always the same for all litecoin users, a private key _k_ multiplied with _G_ will always result in the same public key _K_. The relationship between _k_ and _K_ is fixed, but can only be calculated in one direction, from _k_ to _K_. That's why a litecoin address (derived from _K_) can be shared with anyone and does not reveal the user's private key (_k_).
 
 [TIP]
 ====
@@ -243,18 +243,18 @@ To visualize multiplication of a point with an integer, we will use the simpler 
 .Elliptic curve cryptography: visualizing the multiplication of a point G by an integer k on an elliptic curve
 image::images/mbc2_0404.png["ecc_illustrated"]
 
-=== Bitcoin Addresses
+=== Litecoin Addresses
 
-((("keys and addresses", "bitcoin addresses", id="KAaddress04")))A bitcoin address is a string of digits and characters that can be shared with anyone who wants to send you money. Addresses produced from public keys consist of a string of numbers and letters, beginning with the digit "1." Here's an example of a bitcoin address:
+((("keys and addresses", "litecoin addresses", id="KAaddress04")))A litecoin address is a string of digits and characters that can be shared with anyone who wants to send you money. Addresses produced from public keys consist of a string of numbers and letters, beginning with the digit "1." Here's an example of a litecoin address:
 
 ----
-1J7mdg5rbQyUHENYdx39WVWK7fsLpEoXZy
+LZu2amZosyhLPpcN7cGdUtHS1TSs5eACSQ
 ----
 
 
-The bitcoin address is what appears most commonly in a transaction as the "recipient" of the funds. If we compare a bitcoin transaction to a paper check, the bitcoin address is the beneficiary, which is what we write on the line after "Pay to the order of." On a paper check, that beneficiary can sometimes be the name of a bank account holder, but can also include corporations, institutions, or even cash. Because paper checks do not need to specify an account, but rather use an abstract name as the recipient of funds, they are very flexible payment instruments. Bitcoin transactions use a similar abstraction, the bitcoin address, to make them very flexible. A bitcoin address can represent the owner of a private/public key pair, or it can represent something else, such as a payment script, as we will see in <<p2sh>>. For now, let's examine the simple case, a bitcoin address that represents, and is derived from, a public key.
+The litecoin address is what appears most commonly in a transaction as the "recipient" of the funds. If we compare a litecoin transaction to a paper check, the litecoin address is the beneficiary, which is what we write on the line after "Pay to the order of." On a paper check, that beneficiary can sometimes be the name of a bank account holder, but can also include corporations, institutions, or even cash. Because paper checks do not need to specify an account, but rather use an abstract name as the recipient of funds, they are very flexible payment instruments. Litecoin transactions use a similar abstraction, the bitcoin address, to make them very flexible. A litecoin address can represent the owner of a private/public key pair, or it can represent something else, such as a payment script, as we will see in <<p2sh>>. For now, let's examine the simple case, a litecoin address that represents, and is derived from, a public key.
 
-((("addresses", "algorithms used to create")))The bitcoin address is derived from the public key through the use of one-way cryptographic hashing. A "hashing algorithm" or simply "hash algorithm" is a one-way function that produces a fingerprint or "hash" of an arbitrary-sized input. Cryptographic hash functions are used extensively in bitcoin: in bitcoin addresses, in script addresses, and in the mining Proof-of-Work algorithm. The algorithms used to make a bitcoin address from a public key are the Secure Hash Algorithm (SHA) and the RACE Integrity Primitives Evaluation Message Digest (RIPEMD), specifically SHA256 and RIPEMD160.
+((("addresses", "algorithms used to create")))The litecoin address is derived from the public key through the use of one-way cryptographic hashing. A "hashing algorithm" or simply "hash algorithm" is a one-way function that produces a fingerprint or "hash" of an arbitrary-sized input. Cryptographic hash functions are used extensively in litecoin: in litecoin addresses, in script addresses, and in the mining Proof-of-Work algorithm. The algorithms used to make a litecoin address from a public key are the Secure Hash Algorithm (SHA) and the RACE Integrity Primitives Evaluation Message Digest (RIPEMD), specifically SHA256 and RIPEMD160.
 
 Starting with the public key _K_, we compute the SHA256 hash and then compute the RIPEMD160 hash of the result, producing a 160-bit (20-byte) number:
 
@@ -270,19 +270,20 @@ where _K_ is the public key and _A_ is the resulting bitcoin address.
 
 [TIP]
 ====
-A bitcoin address is _not_ the same as a public key. Bitcoin addresses are derived from a public key using a one-way function.
+A litecoin address is _not_ the same as a public key. Litecoin addresses are derived from a public key using a one-way function.
 ====
 
-Bitcoin addresses are almost always encoded as "Base58Check" (see <<base58>>), which uses 58 characters (a Base58 number system) and a checksum to help human readability, avoid ambiguity, and protect against errors in address transcription and entry. Base58Check is also used in many other ways in bitcoin, whenever there is a need for a user to read and correctly transcribe a number, such as a bitcoin address, a private key, an encrypted key, or a script hash. In the next section we will examine the mechanics of Base58Check encoding and decoding and the resulting representations. <<pubkey_to_address>> illustrates the conversion of a public key into a bitcoin address.
+Litecoin addresses are almost always encoded as "Base58Check" (see <<base58>>), which uses 58 characters (a Base58 number system) and a checksum to help human readability, avoid ambiguity, and protect against errors in address transcription and entry. Base58Check is also used in many other ways in litecoin, whenever there is a need for a user to read and correctly transcribe a number, such as a litecoin address, a private key, an encrypted key, or a script hash. In the next section we will examine the mechanics of Base58Check encoding and decoding and the resulting representations. <<pubkey_to_address>> illustrates the conversion of a public key into a litecoin address.
 
 [[pubkey_to_address]]
-.Public key to bitcoin address: conversion of a public key into a bitcoin address
-image::images/mbc2_0405.png["pubkey_to_address"]
+.Public key to litecoin address: conversion of a public key into a litecoin address
+
+![public key to litecoin address](https://user-images.githubusercontent.com/32662508/48245602-7ad74180-e3a0-11e8-9f2b-b39c1bf6050f.jpg)["pubkey_to_address"]
 
 [[base58]]
 ==== Base58 and Base58Check Encoding
 
-((("keys and addresses", "bitcoin addresses", "Base58 and Base58check encoding")))((("Base58 and Base58check encoding", id="base5804")))((("addresses", "Base58 and Base58check encoding", id="Abase5804")))In order to represent long numbers in a compact way, using fewer symbols, many computer systems use mixed-alphanumeric representations with a base (or radix) higher than 10. For example, whereas the traditional decimal system uses the 10 numerals 0 through 9, the hexadecimal system uses 16, with the letters A through F as the six additional symbols. A number represented in hexadecimal format is shorter than the equivalent decimal representation. Even more compact, Base64 representation uses 26 lowercase letters, 26 capital letters, 10 numerals, and 2 more characters such as &#x201c;`+`&#x201d; and "/" to transmit binary data over text-based media such as email. Base64 is most commonly used to add binary attachments to email. Base58 is a text-based binary-encoding format developed for use in bitcoin and used in many other cryptocurrencies. It offers a balance between compact representation, readability, and error detection and prevention. Base58 is a subset of Base64, using upper- and lowercase letters and numbers, but omitting some characters that are frequently mistaken for one another and can appear identical when displayed in certain fonts. Specifically, Base58 is Base64 without the 0 (number zero), O (capital o), l (lower L), I (capital i), and the symbols &#x201c;`+`&#x201d; and "/". Or, more simply, it is a set of lowercase and capital letters and numbers without the four (0, O, l, I) just mentioned. <<base58alphabet>> shows the full Base58 alphabet.
+((("keys and addresses", "bitcoin addresses", "Base58 and Base58check encoding")))((("Base58 and Base58check encoding", id="base5804")))((("addresses", "Base58 and Base58check encoding", id="Abase5804")))In order to represent long numbers in a compact way, using fewer symbols, many computer systems use mixed-alphanumeric representations with a base (or radix) higher than 10. For example, whereas the traditional decimal system uses the 10 numerals 0 through 9, the hexadecimal system uses 16, with the letters A through F as the six additional symbols. A number represented in hexadecimal format is shorter than the equivalent decimal representation. Even more compact, Base64 representation uses 26 lowercase letters, 26 capital letters, 10 numerals, and 2 more characters such as &#x201c;`+`&#x201d; and "/" to transmit binary data over text-based media such as email. Base64 is most commonly used to add binary attachments to email. Base58 is a text-based binary-encoding format developed for use in litecoin and used in many other cryptocurrencies. It offers a balance between compact representation, readability, and error detection and prevention. Base58 is a subset of Base64, using upper- and lowercase letters and numbers, but omitting some characters that are frequently mistaken for one another and can appear identical when displayed in certain fonts. Specifically, Base58 is Base64 without the 0 (number zero), O (capital o), l (lower L), I (capital i), and the symbols &#x201c;`+`&#x201d; and "/". Or, more simply, it is a set of lowercase and capital letters and numbers without the four (0, O, l, I) just mentioned. <<base58alphabet>> shows the full Base58 alphabet.
 
 [[base58alphabet]]
 .Bitcoin's Base58 alphabet
