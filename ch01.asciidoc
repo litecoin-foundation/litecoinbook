@@ -127,9 +127,9 @@ When Alice runs Loafwallet for the first time, as with many litecoin wallets, th
 
 [[loafwallet-welcome]]
 .The Loafwallet Mobile Wallet
-![loafwallet](https://user-images.githubusercontent.com/32662508/48178544-0d0f1500-e2cf-11e8-8080-a9077a6155c1.jpg)
+![alice loafwallet](https://user-images.githubusercontent.com/32662508/48392746-686f4780-e6c1-11e8-8d34-7176f1f3891e.jpg)
 
-((("addresses", "litecoin wallet quick start example")))((("QR codes", "litecoin wallet quick start example")))((("addresses", see="also keys and addresses")))The most important part of this screen is Alice's _litecoin address_. On the screen it appears as a long string of letters and numbers: +LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2+. Next to the wallet's litecoin address is a QR code, a form of barcode that contains the same information in a format that can be scanned by a smartphone camera. The QR code is the square with a pattern of black and white dots. Alice can copy the litecoin address or the QR code onto her clipboard by tapping the QR code, or the Receive button. In most wallets, tapping the QR code will also magnify it, so that it can be more easily scanned by a smartphone camera.
+((("addresses", "litecoin wallet quick start example")))((("QR codes", "litecoin wallet quick start example")))((("addresses", see="also keys and addresses")))The most important part of this screen is Alice's _litecoin address_. On the screen it appears as a long string of letters and numbers: +LeeGyFuk2tV2A4uzxXDRVtJWNG4mx3tzxQ+. Next to the wallet's litecoin address is a QR code, a form of barcode that contains the same information in a format that can be scanned by a smartphone camera. The QR code is the square with a pattern of black and white dots. Alice can copy the litecoin address or the QR code onto her clipboard by tapping the QR code, or the Receive button. In most wallets, tapping the QR code will also magnify it, so that it can be more easily scanned by a smartphone camera.
 
 [TIP]
 ====
@@ -189,12 +189,12 @@ Joe then selects Send on his smartphone wallet and is presented with a screen co
 
 In the input field for the litecoin address, there is a small icon that looks like a QR code. This allows Joe to scan the barcode with his smartphone camera so that he doesn't have to type in Alice's litecoin address, which is quite long and difficult to type. Joe taps the QR code icon and activates the smartphone camera, scanning the QR code displayed on Alice's smartphone.
 
-Joe now has Alice's litecoin address set as the recipient. Joe enters the amount as $10 US dollars and his wallet converts it by accessing the most recent exchange rate from an online service. The exchange rate at the time is $100 US dollars per litecoin, so $10 US dollars is worth 0.10 litecoin (LTC) as shown in the screenshot from Joe's wallet (see <<airbitz-mobile-send>>).
+Joe now has Alice's litecoin address set as the recipient. Joe enters the amount as $10 US dollars and his wallet converts it by accessing the most recent exchange rate from an online service. The exchange rate at the time is $100 US dollars per litecoin, so $10 US dollars is worth 0.10 litecoin (LTC) as shown in the screenshot from Joe's wallet (see <<loafwallet-send>>).
 
-[[airbitz-mobile-send]]
+[[loafwallet-send]]
 [role="smallereighty"]
-.Airbitz mobile litecoin wallet send screen
-![loafwallet send](https://user-images.githubusercontent.com/32662508/48179035-e2728b80-e2d1-11e8-9513-7ea76cad8d1b.jpg)
+.Loafwallet mobile litecoin wallet send screen
+![joe loafwallet send](https://user-images.githubusercontent.com/32662508/48393133-2fd06d80-e6c3-11e8-8cc2-82c82f67f64e.jpg)
 
 Joe then carefully checks to make sure he has entered the correct amount, because he is about to transmit money and mistakes are irreversible. After double-checking the address and amount, he presses Send to transmit the transaction. Joe's mobile litecoin wallet constructs a transaction that assigns 0.10 LTC to the address provided by Alice, sourcing the funds from Joe's wallet and signing the transaction with Joe's private keys. This tells the litecoin network that Joe has authorized a transfer of value to Alice's new address. As the transaction is transmitted via the peer-to-peer protocol, it quickly propagates across the litecoin network. In less than a second, most of the well-connected nodes in the network receive the transaction and see Alice's address for the first time.
 
