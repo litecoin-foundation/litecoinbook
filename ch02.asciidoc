@@ -46,7 +46,8 @@ Unlike a QR code that simply contains a destination litecoin address, a payment 
 
 [[payment-request-QR]]
 .Payment request QR code
-![ltc invoice](https://user-images.githubusercontent.com/32662508/48213328-62c8d900-e332-11e8-896e-e2a29494c832.jpg)
+![payment request qr code](https://user-images.githubusercontent.com/32662508/48395368-eb959b00-e6cb-11e8-8e5c-a5613db39654.png)
+
 
 [TIP]
 ====
@@ -55,13 +56,15 @@ Unlike a QR code that simply contains a destination litecoin address, a payment 
 [[payment-request-URL]]
 .The payment request QR code encodes the following URL, defined in BIP-21:
 ----
-litecoin:LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2?
+litecoin:LiQSvTfL5kDhxaT8YMgt4ddBqAnwSuka17?
 amount=0.015&
+message=Purchase%20at%20Bob%27s%20Cafe
 
 Components of the URL
 
-A litecoin address: "LdBLWHT4JJkLrKUxw8tDNybkdL97x23iX2"
+A litecoin address: "LiQSvTfL5kDhxaT8YMgt4ddBqAnwSuka17"
 The payment amount: "0.015"
+A description for the payment: "Purchase at Bob's Cafe"
 ----
 
 Alice uses her smartphone to scan the barcode on display. Her smartphone shows a payment of +0.0150 LTC+ to +Bob's Cafe+ and she selects Send to authorize the payment. Within a few seconds (about the same amount of time as a credit card authorization), Bob sees the transaction on the register, completing the transaction.
@@ -76,10 +79,10 @@ In the following sections, we will examine this transaction in more detail. We'l
 You can examine Alice's transaction to Bob's Cafe on the blockchain using a block explorer site (<<view_alice_transaction>>):
 
 [[view_alice_transaction]]
-.View Alice's transaction on https://insight.litecore.io/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e[https://insight.litecore.io/]
+.View Alice's transaction on https://insight.litecore.io/tx/fcf612380baf19ac9e645e2a3fe4ab03b257da752d051bca0c3b9af03199daf9[insight.litecore.io]
 ====
 ----
-https://insight.litecore.io/tx/d3a9e807944b09b5fabcb28f8a27b547ed6aa71af9fc0034489117a753d25a3e
+https://insight.litecore.io/tx/fcf612380baf19ac9e645e2a3fe4ab03b257da752d051bca0c3b9af03199daf9
 ----
 ====
 
@@ -196,12 +199,12 @@ The resulting transaction can be seen using a blockchain explorer web applicatio
 [[transaction-alice]]
 [role="smallerseventyfive"]
 .Alice's transaction to Bob's Cafe
-image::images/mbc2_0208.png["Alice Coffee Transaction"]
+![alice transaction insight](https://user-images.githubusercontent.com/32662508/48396567-bab76500-e6cf-11e8-8416-6210588553bb.png)
 
 [[transaction-alice-url]]
 [TIP]
 ====
-View the http://bit.ly/1u0FIGs[transaction from Alice to Bob's Cafe].
+View the https://insight.litecore.io/tx/fcf612380baf19ac9e645e2a3fe4ab03b257da752d051bca0c3b9af03199daf9[transaction from Alice to Bob's Cafe].
 ====
 
 ==== Adding the Transaction to the Ledger
