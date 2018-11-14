@@ -297,7 +297,7 @@ There is also a BIP-39 generator implemented in a standalone webpage, which is e
 
 [[a_bip39_generator_as_a_standalone_web_page]]
 .A BIP-39 generator as a standalone web page
-image::images/mbc2_0508.png["BIP-39 generator web-page"]
+image::https://user-images.githubusercontent.com/32662508/48452306-51813180-e763-11e8-8c8c-7177e978449d.png["BIP-39 generator web-page"]
 
 ((("", startref="mnemonic05")))((("", startref="BIP3905")))The page (https://iancoleman.github.io/bip39/) can be used offline in a browser, or accessed online.
 
@@ -416,8 +416,7 @@ To export the xpub, Gabriel uses the web-based software in conjunction with the 
 
 [[export_xpub]]
 .Exporting an xpub from a Trezor hardware wallet
-![trezor export pubkey](https://user-images.githubusercontent.com/32662508/48278818-755f1300-e403-11e8-9fe4-4c32c80d3e14.jpg)
-["Exporting the xpub from the Trezor"]
+image::https://user-images.githubusercontent.com/32662508/48278818-755f1300-e403-11e8-9fe4-4c32c80d3e14.jpg["Exporting the xpub from the Trezor"]
 
 Gabriel copies the xpub to his web store's litecoin shop software. He uses _Mycelium Gear_, which is an open source web-store plugin for a variety of web hosting and content platforms. Mycelium Gear uses the xpub to generate a unique address for every purchase. ((("", startref="gabrielfivetwo")))
 
