@@ -16,7 +16,7 @@ Litecoin Core is the _reference implementation_ of the litecoin system, meaning 
 
 [[litecoin_core_architecture]]
 .Litecoin Core architecture (Source: Eric Lombrozo)
-![litecoin core diagram](https://user-images.githubusercontent.com/32662508/48244414-86276e80-e39a-11e8-99f7-4a699ed0753a.jpg)["Bitcoin Core Architecture"]
+image::https://user-images.githubusercontent.com/32662508/48244414-86276e80-e39a-11e8-99f7-4a699ed0753a.jpg["Litecoin Core Architecture"]
 
 
 === Litecoin Development Environment
