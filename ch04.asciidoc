@@ -806,13 +806,13 @@ Paper wallets can be generated easily using a tool such as the client-side JavaS
 
 [[paper_wallet_simple]]
 .An example of a simple paper wallet from liteaddress.org
-![paper wallet liteaddress](https://user-images.githubusercontent.com/32662508/48246024-917e9800-e3a2-11e8-945e-a0c15f3182b5.png)
+image::https://user-images.githubusercontent.com/32662508/48246024-917e9800-e3a2-11e8-945e-a0c15f3182b5.png[]
 
 ((("bitcoin improvement proposals", "Encrypted Private Keys (BIP-38)")))The disadvantage of a simple paper wallet system is that the printed keys are vulnerable to theft. A thief who is able to gain access to the paper can either steal it or photograph the keys and take control of the litecoin locked with those keys. A more sophisticated paper wallet storage system uses BIP-38 encrypted private keys. The keys printed on the paper wallet are protected by a passphrase that the owner has memorized. Without the passphrase, the encrypted keys are useless. Yet, they still are superior to a passphrase-protected wallet because the keys have never been online and must be physically retrieved from a safe or other physically secured storage. <<paper_wallet_encrypted>> shows a paper wallet with an encrypted private key (BIP-38) created on the liteaddress.org site.
 
 [[paper_wallet_encrypted]]
 .An example of an encrypted paper wallet from liteaddress.org. The passphrase is "chikun."
-![encrypted paper wallet](https://user-images.githubusercontent.com/32662508/48246090-de626e80-e3a2-11e8-9dec-ea77c9f5eb6e.png)
+image::https://user-images.githubusercontent.com/32662508/48246090-de626e80-e3a2-11e8-9dec-ea77c9f5eb6e.png[]
 
 [WARNING]
 ====
@@ -823,8 +823,8 @@ Paper wallets come in many designs and sizes, with many different features. Some
 
 [[paper_wallet_bpw]]
 .An example of a paper wallet from https://bitcoinpaperwallet.com/litecoin-paper-wallet-generator/ with the private key on a folding flap
-![foldable paper wallet](https://user-images.githubusercontent.com/32662508/48246213-65174b80-e3a3-11e8-868d-6b59c2522a18.png)
+image::https://user-images.githubusercontent.com/32662508/48246213-65174b80-e3a3-11e8-868d-6b59c2522a18.png[]
 
 [[paper_wallet_bpw_folded]]
 .The bitcoinpaperwallet.com/litecoin-paper-wallet-generator/ paper wallet with the private key concealed
-![folded paper wallet](https://user-images.githubusercontent.com/32662508/48246294-c63f1f00-e3a3-11e8-9116-d6065610ccb3.png)
+image::https://user-images.githubusercontent.com/32662508/48246294-c63f1f00-e3a3-11e8-9116-d6065610ccb3.png[]
