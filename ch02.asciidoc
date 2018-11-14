@@ -270,8 +270,7 @@ You can see the block that includes https://insight.litecore.io/block/a4311c9dfc
 
 [[block-alice1]]
 .Alice's transaction included in block #1526033
-![alices transaction in a block](https://user-images.githubusercontent.com/32662508/48396290-bdfe2100-e6ce-11e8-8fd9-774b249934eb.jpg
-["Alice's transaction included in a block"]
+image::https://user-images.githubusercontent.com/32662508/48396290-bdfe2100-e6ce-11e8-8fd9-774b249934eb.jpg["Alice's transaction included in a block"]
 
 === Spending the Transaction
 
