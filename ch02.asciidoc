@@ -46,7 +46,7 @@ Unlike a QR code that simply contains a destination litecoin address, a payment 
 
 [[payment-request-QR]]
 .Payment request QR code
-![payment request qr code](https://user-images.githubusercontent.com/32662508/48395368-eb959b00-e6cb-11e8-8e5c-a5613db39654.png)
+image::https://user-images.githubusercontent.com/32662508/48395368-eb959b00-e6cb-11e8-8e5c-a5613db39654.png["payment-request"]
 
 
 [TIP]
@@ -199,7 +199,7 @@ The resulting transaction can be seen using a blockchain explorer web applicatio
 [[transaction-alice]]
 [role="smallerseventyfive"]
 .Alice's transaction to Bob's Cafe
-![alice transaction insight](https://user-images.githubusercontent.com/32662508/48396567-bab76500-e6cf-11e8-8416-6210588553bb.png)
+image::https://user-images.githubusercontent.com/32662508/48396567-bab76500-e6cf-11e8-8416-6210588553bb.png["Alice Coffee Transaction"]
 
 [[transaction-alice-url]]
 [TIP]
