@@ -507,7 +507,7 @@ image::images/mbc2_0606.png["Tx_Script_P2PubKeyHash_2"]
 
 ((("digital signatures", "algorithm used")))((("Elliptic Curve Digital Signature Algorithm (ECDSA)")))The digital signature algorithm used in bitcoin is the _Elliptic Curve Digital Signature Algorithm_, or _ECDSA_. ECDSA is the algorithm used for digital signatures based on elliptic curve private/public key pairs, as described in <<elliptic_curve>>. ECDSA is used by the script functions +OP_CHECKSIG+, +OP_CHECKSIGVERIFY+, +OP_CHECKMULTISIG+, and +OP_CHECKMULTISIGVERIFY+. Any time you see those in a locking script, the unlocking script must contain an ECDSA signature.
 
-((("digital signatures", "purposes of")))A digital signature serves three purposes in bitcoin (see the following sidebar). First, the signature proves that the owner of the private key, who is by implication the owner of the funds, has _authorized_ the spending of those funds. Secondly, the proof of authorization is _undeniable_ (nonrepudiation). Thirdly, the signature proves that the transaction (or specific parts of the transaction) have not and _cannot be modified_ by anyone after it has been signed.
+((("digital signatures", "purposes of")))A digital signature serves three purposes in litecoin (see the following sidebar). First, the signature proves that the owner of the private key, who is by implication the owner of the funds, has _authorized_ the spending of those funds. Secondly, the proof of authorization is _undeniable_ (nonrepudiation). Thirdly, the signature proves that the transaction (or specific parts of the transaction) have not and _cannot be modified_ by anyone after it has been signed.
 
 Note that each transaction input is signed independently. This is critical, as neither the signatures nor the inputs have to belong to or be applied by the same "owners." In fact, a specific transaction scheme called "CoinJoin" uses this fact to create multi-party transactions for privacy.
 
@@ -530,7 +530,7 @@ _Source: https://en.wikipedia.org/wiki/Digital_signature_
 
 ===== Creating a digital signature
 
-In bitcoin's implementation of the ECDSA algorithm, the "message" being signed is the transaction, or more accurately a hash of a specific subset of the data in the transaction (see <<sighash_types>>). The signing key is the user's private key. The result is the signature:
+In litecoin's implementation of the ECDSA algorithm, the "message" being signed is the transaction, or more accurately a hash of a specific subset of the data in the transaction (see <<sighash_types>>). The signing key is the user's private key. The result is the signature:
 
 latexmath:[\(Sig = F_{sig}(F_{hash}(m), dA)\)]
 
@@ -558,7 +558,7 @@ Sig = (R, S)
 Let's look at the transaction Alice ((("use cases", "buying coffee", id="alicesixtwo")))created again. In the transaction input there is an unlocking script that contains the following DER-encoded signature from Alice's wallet:
 
 ----
-3045022100884d142d86652a3f47ba4746ec719bbfbd040a570b1deccbb6498c75c4ae24cb02204b9f039ff08df09cbe9f6addac960298cad530a863ea8f53982c09db8f6e381301
+3045022100f50555c9f55f6358232a780793f385bb502021ca71ff82ba7928d2f7d4aa445002204778d97ada5f69d8daa7091f3b4db3d90f38f477081e4b04a959df0cf22ad757
 ----
 
 That signature is a serialized byte-stream of the +R+ and +S+ values produced by Alice's wallet to prove she owns the private key authorized to spend that output. The serialization format consists of nine elements as follows:
@@ -584,11 +584,11 @@ The signature verification algorithm takes the message (a hash of the transactio
 [[sighash_types]]
 ==== Signature Hash Types (SIGHASH)
 
-((("digital signatures", "signature hash types")))((("commitment")))Digital signatures are applied to messages, which in the case of bitcoin, are the transactions themselves. The signature implies a _commitment_ by the signer to specific transaction data. In the simplest form, the signature applies to the entire transaction, thereby committing all the inputs, outputs, and other transaction fields. However, a signature can commit to only a subset of the data in a transaction, which is useful for a number of scenarios as we will see in this section.
+((("digital signatures", "signature hash types")))((("commitment")))Digital signatures are applied to messages, which in the case of litecoin, are the transactions themselves. The signature implies a _commitment_ by the signer to specific transaction data. In the simplest form, the signature applies to the entire transaction, thereby committing all the inputs, outputs, and other transaction fields. However, a signature can commit to only a subset of the data in a transaction, which is useful for a number of scenarios as we will see in this section.
 
-((("SIGHASH flags")))Bitcoin signatures have a way of indicating which part of a transaction's data is included in the hash signed by the private key using a +SIGHASH+ flag. The +SIGHASH+ flag is a single byte that is appended to the signature. Every signature has a +SIGHASH+ flag and the flag can be different from input to input. A transaction with three signed inputs may have three signatures with different +SIGHASH+ flags, each signature signing (committing) different parts of the transaction.
+((("SIGHASH flags")))Litecoin signatures have a way of indicating which part of a transaction's data is included in the hash signed by the private key using a +SIGHASH+ flag. The +SIGHASH+ flag is a single byte that is appended to the signature. Every signature has a +SIGHASH+ flag and the flag can be different from input to input. A transaction with three signed inputs may have three signatures with different +SIGHASH+ flags, each signature signing (committing) different parts of the transaction.
 
-Remember, each input may contain a signature in its unlocking script. As a result, a transaction that contains several inputs may have signatures with different +SIGHASH+ flags that commit different parts of the transaction in each of the inputs. Note also that bitcoin transactions may contain inputs from different "owners," who may sign only one input in a partially constructed (and invalid) transaction, collaborating with others to gather all the necessary signatures to make a valid transaction. Many of the +SIGHASH+ flag types only make sense if you think of multiple participants collaborating outside the bitcoin network and updating a partially signed transaction.
+Remember, each input may contain a signature in its unlocking script. As a result, a transaction that contains several inputs may have signatures with different +SIGHASH+ flags that commit different parts of the transaction in each of the inputs. Note also that litecoin transactions may contain inputs from different "owners," who may sign only one input in a partially constructed (and invalid) transaction, collaborating with others to gather all the necessary signatures to make a valid transaction. Many of the +SIGHASH+ flag types only make sense if you think of multiple participants collaborating outside the bitcoin network and updating a partially signed transaction.
 
 [role="pagebreak-before"]
 There are three +SIGHASH+ flags: +ALL+, +NONE+, and +SINGLE+, as shown in <<sighash_types_and_their>>.
@@ -628,7 +628,7 @@ Let's look at some of the other +SIGHASH+ types and how they can be used in prac
 
 +ALL|ANYONECANPAY+ :: ((("charitable donations")))((("use cases", "charitable donations")))This construction can be used to make a "crowdfunding&#x201d;-style transaction. Someone attempting to raise funds can construct a transaction with a single output. The single output pays the "goal" amount to the fundraiser. Such a transaction is obviously not valid, as it has no inputs. However, others can now amend it by adding an input of their own, as a donation. They sign their own input with +ALL|ANYONECANPAY+. Unless enough inputs are gathered to reach the value of the output, the transaction is invalid. Each donation is a "pledge," which cannot be collected by the fundraiser until the entire goal amount is raised.
 
-+NONE+ :: This construction can be used to create a "bearer check" or "blank check" of a specific amount. It commits to the input, but allows the output locking script to be changed. Anyone can write their own bitcoin address into the output locking script and redeem the transaction. However, the output value itself is locked by the signature.
++NONE+ :: This construction can be used to create a "bearer check" or "blank check" of a specific amount. It commits to the input, but allows the output locking script to be changed. Anyone can write their own litecoin address into the output locking script and redeem the transaction. However, the output value itself is locked by the signature.
 
 +NONE|ANYONECANPAY+ :: This construction can be used to build a "dust collector." Users who have tiny UTXO in their wallets can't spend these without the cost in fees exceeding the value of the dust. With this type of signature, the dust UTXO can be donated for anyone to aggregate and spend whenever they want.
 
@@ -636,7 +636,7 @@ Let's look at some of the other +SIGHASH+ types and how they can be used in prac
 
 [NOTE]
 ====
-You will not see +SIGHASH+ flags presented as an option in a user's wallet application. With few exceptions, wallets construct P2PKH scripts and sign with +SIGHASH_ALL+ flags. To use a different +SIGHASH+ flag, you would have to write software to construct and sign transactions. More importantly, +SIGHASH+ flags can be used by special-purpose bitcoin applications that enable novel uses.
+You will not see +SIGHASH+ flags presented as an option in a user's wallet application. With few exceptions, wallets construct P2PKH scripts and sign with +SIGHASH_ALL+ flags. To use a different +SIGHASH+ flag, you would have to write software to construct and sign transactions. More importantly, +SIGHASH+ flags can be used by special-purpose litecoin applications that enable novel uses.
 ====
 
 [[ecdsa_math]]
@@ -689,46 +689,46 @@ ECDSA is necessarily a fairly complicated piece of math; a full explanation is b
 ((("warnings and cautions", "digital signatures")))If the same value _k_ is used in the signing algorithm on two different transactions, the private key can be calculated and exposed to the world!
 ====
 
-This is not just a theoretical possibility. We have seen this issue lead to exposure of private keys in a few different implementations of transaction-signing algorithms in bitcoin. People have had funds stolen because of inadvertent reuse of a _k_ value. The most common reason for reuse of a _k_ value is an improperly initialized random-number generator.
+This is not just a theoretical possibility. We have seen this issue lead to exposure of private keys in a few different implementations of transaction-signing algorithms in litecoin. People have had funds stolen because of inadvertent reuse of a _k_ value. The most common reason for reuse of a _k_ value is an improperly initialized random-number generator.
 
 ((("random numbers", "random number generation")))((("entropy", "random number generation")))((("deterministic initialization")))To avoid this vulnerability, the industry best practice is to not generate _k_ with a random-number generator seeded with entropy, but instead to use a deterministic-random process seeded with the transaction data itself. This ensures that each transaction produces a different _k_. The industry-standard algorithm for deterministic initialization of _k_ is defined in https://tools.ietf.org/html/rfc6979[RFC 6979], published by the Internet Engineering Task Force.
 
-If you are implementing an algorithm to sign transactions in bitcoin, you _must_ use RFC 6979 or a similarly deterministic-random algorithm to ensure you generate a different _k_ for each transaction.((("", startref="Tdigsig06")))
+If you are implementing an algorithm to sign transactions in litecoin, you _must_ use RFC 6979 or a similarly deterministic-random algorithm to ensure you generate a different _k_ for each transaction.((("", startref="Tdigsig06")))
 
-=== Bitcoin Addresses, Balances, and Other Abstractions
+=== Litecoin Addresses, Balances, and Other Abstractions
 
-((("transactions", "higher-level abstractions", id="Thigher06")))We began this chapter with the discovery that transactions look very different "behind the scenes" than how they are presented in wallets, blockchain explorers, and other user-facing applications. Many of the simplistic and familiar concepts from the earlier chapters, such as bitcoin addresses and balances, seem to be absent from the transaction structure. We saw that transactions don't contain bitcoin addresses, per se, but instead operate through scripts that lock and unlock discrete values of bitcoin. Balances are not present anywhere in this system and yet every wallet application prominently displays the balance of the user's wallet.
+((("transactions", "higher-level abstractions", id="Thigher06")))We began this chapter with the discovery that transactions look very different "behind the scenes" than how they are presented in wallets, blockchain explorers, and other user-facing applications. Many of the simplistic and familiar concepts from the earlier chapters, such as litecoin addresses and balances, seem to be absent from the transaction structure. We saw that transactions don't contain litecoin addresses, per se, but instead operate through scripts that lock and unlock discrete values of litecoin. Balances are not present anywhere in this system and yet every wallet application prominently displays the balance of the user's wallet.
 
-Now that we have explored what is actually included in a bitcoin transaction, we can examine how the higher-level abstractions are derived from the seemingly primitive components of the transaction.
+Now that we have explored what is actually included in a litecoin transaction, we can examine how the higher-level abstractions are derived from the seemingly primitive components of the transaction.
 
 Let's look again at how Alice's transaction was presented on a popular block explorer (<<alice_transaction_to_bobs_cafe>>).
 
 [[alice_transaction_to_bobs_cafe]]
 .Alice's transaction to Bob's Cafe
-image::images/mbc2_0208.png["Alice Coffee Transaction"]
+![alice transaction insight](https://user-images.githubusercontent.com/32662508/48396567-bab76500-e6cf-11e8-8416-6210588553bb.png)
 
-On the left side of the transaction, the blockchain explorer shows Alice's bitcoin address as the "sender." In fact, this information is not in the transaction itself. When the blockchain explorer retrieved the transaction it also retrieved the previous transaction referenced in the input and extracted the first output from that older transaction. Within that output is a locking script that locks the UTXO to Alice's public key hash (a P2PKH script). The blockchain explorer extracted the public key hash and encoded it using Base58Check encoding to produce and display the bitcoin address that represents that public key.
+On the left side of the transaction, the blockchain explorer shows Alice's litecoin address as the "sender." In fact, this information is not in the transaction itself. When the blockchain explorer retrieved the transaction it also retrieved the previous transaction referenced in the input and extracted the first output from that older transaction. Within that output is a locking script that locks the UTXO to Alice's public key hash (a P2PKH script). The blockchain explorer extracted the public key hash and encoded it using Base58Check encoding to produce and display the litecoin address that represents that public key.
 
-Similarly, on the right side, the blockchain explorer shows the two outputs; the first to Bob's bitcoin address and the second to Alice's bitcoin address (as change). Once again, to create these bitcoin addresses, the blockchain explorer extracted the locking script from each output, recognized it as a P2PKH script, and extracted the public-key-hash from within. Finally, the blockchain explorer reencoded that public key hash with Base58Check to produce and display the bitcoin addresses.
+Similarly, on the right side, the blockchain explorer shows the two outputs; the first to Alice's litecoin address (as change) and the second to Bob's litecoin address. Once again, to create these litecoin addresses, the blockchain explorer extracted the locking script from each output, recognized it as a P2PKH script, and extracted the public-key-hash from within. Finally, the blockchain explorer reencoded that public key hash with Base58Check to produce and display the litecoin addresses.
 
-If you were to click on Bob's bitcoin address, the blockchain explorer would show you the view in <<the_balance_of_bobs_bitcoin_address>>.
+If you were to click on Bob's litecoin address, the blockchain explorer would show you the view in <<the_balance_of_bobs_litecoin_address>>.
 
-[[the_balance_of_bobs_bitcoin_address]]
-.The balance of Bob's bitcoin address
-image::images/mbc2_0608.png["The balance of Bob's bitcoin address"]
+[[the_balance_of_bobs_litecoin_address]]
+.The balance of Bob's litecoin address
+image::https://user-images.githubusercontent.com/32662508/48451720-8c359a80-e760-11e8-99c0-9e50335f8cf6.png["The balance of Bob's bitcoin address"]
 
-The blockchain explorer displays the balance of Bob's bitcoin address. But nowhere in the bitcoin system is there a concept of a "balance." Rather, the values displayed here are constructed by the blockchain explorer as follows.
+The blockchain explorer displays the balance of Bob's litecoin address. But nowhere in the litecoin system is there a concept of a "balance." Rather, the values displayed here are constructed by the blockchain explorer as follows.
 
-To construct the "Total Received" amount, the blockchain explorer first will decode the Base58Check encoding of the bitcoin address to retrieve the 160-bit hash of Bob's public key that is encoded within the address. Then, the blockchain explorer will search through the database of transactions, looking for outputs with P2PKH locking scripts that contain Bob's public key hash. By summing up the value of all the outputs, the blockchain explorer can produce the total value received.
+To construct the "Total Received" amount, the blockchain explorer first will decode the Base58Check encoding of the litecoin address to retrieve the 160-bit hash of Bob's public key that is encoded within the address. Then, the blockchain explorer will search through the database of transactions, looking for outputs with P2PKH locking scripts that contain Bob's public key hash. By summing up the value of all the outputs, the blockchain explorer can produce the total value received.
 
-Constructing the current balance (displayed as "Final Balance") requires a bit more work. The blockchain explorer keeps a separate database of the outputs that are currently unspent, the UTXO set. To maintain this database, the blockchain explorer must monitor the bitcoin network, add newly created UTXO, and remove spent UTXO, in real time, as they appear in unconfirmed transactions. This is a complicated process that depends on keeping track of transactions as they propagate, as well as maintaining consensus with the bitcoin network to ensure that the correct chain is followed. Sometimes, the blockchain explorer goes out of sync and its perspective of the UTXO set is incomplete or incorrect.
+Constructing the current balance (displayed as "Final Balance") requires a bit more work. The blockchain explorer keeps a separate database of the outputs that are currently unspent, the UTXO set. To maintain this database, the blockchain explorer must monitor the litecoin network, add newly created UTXO, and remove spent UTXO, in real time, as they appear in unconfirmed transactions. This is a complicated process that depends on keeping track of transactions as they propagate, as well as maintaining consensus with the litecoin network to ensure that the correct chain is followed. Sometimes, the blockchain explorer goes out of sync and its perspective of the UTXO set is incomplete or incorrect.
 
 From the UTXO set, the blockchain explorer sums up the value of all unspent outputs referencing Bob's public key hash and produces the "Final Balance" number shown to the user.
 
 In order to produce this one image, with these two "balances," the blockchain explorer has to index and search through dozens, hundreds, or even hundreds of thousands of transactions.
 
-In summary, the information presented to users through wallet applications, blockchain explorers, and other bitcoin user interfaces is often composed of higher-level abstractions that are derived by searching many different transactions, inspecting their content, and manipulating the data contained within them. By presenting this simplistic view of bitcoin transactions that resemble bank checks from one sender to one recipient, these applications have to abstract a lot of underlying detail. They mostly focus on the common types of transactions: P2PKH with SIGHASH_ALL signatures on every input. Thus, while bitcoin applications can present more than 80% of all transactions in an easy-to-read manner, they are sometimes stumped by transactions that deviate from the norm. Transactions that contain more complex locking scripts, or different SIGHASH flags, or many inputs and outputs, demonstrate the simplicity and weakness of these abstractions.
+In summary, the information presented to users through wallet applications, blockchain explorers, and other litecoin user interfaces is often composed of higher-level abstractions that are derived by searching many different transactions, inspecting their content, and manipulating the data contained within them. By presenting this simplistic view of litecoin transactions that resemble bank checks from one sender to one recipient, these applications have to abstract a lot of underlying detail. They mostly focus on the common types of transactions: P2PKH with SIGHASH_ALL signatures on every input. Thus, while litecoin applications can present more than 80% of all transactions in an easy-to-read manner, they are sometimes stumped by transactions that deviate from the norm. Transactions that contain more complex locking scripts, or different SIGHASH flags, or many inputs and outputs, demonstrate the simplicity and weakness of these abstractions.
 
-Every day, hundreds of transactions that do not contain P2PKH outputs are confirmed on the blockchain. The blockchain explorers often present these with red warning messages saying they cannot decode an address. The following link contains the most recent "strange transactions" that were not fully decoded: https://blockchain.info/strange-transactions[].
+Every day, hundreds of transactions that do not contain P2PKH outputs are confirmed on the blockchain. The blockchain explorers often present these with red warning messages saying they cannot decode an address. 
 
 As we will see in the next chapter, these are not necessarily strange transactions. They are transactions that contain more complex locking scripts than the common P2PKH. We will learn how to decode and understand more complex scripts and the applications they support next.((("", startref="Thigher06")))((("", startref="alicesixtwo")))
