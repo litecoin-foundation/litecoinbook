@@ -278,7 +278,7 @@ Litecoin addresses are almost always encoded as "Base58Check" (see <<base58>>), 
 [[pubkey_to_address]]
 .Public key to litecoin address: conversion of a public key into a litecoin address
 
-![public key to litecoin address](https://user-images.githubusercontent.com/32662508/48245602-7ad74180-e3a0-11e8-9f2b-b39c1bf6050f.jpg)["pubkey_to_address"]
+image::https://user-images.githubusercontent.com/32662508/48245602-7ad74180-e3a0-11e8-9f2b-b39c1bf6050f.jpg["pubkey_to_address"]
 
 [[base58]]
 ==== Base58 and Base58Check Encoding
