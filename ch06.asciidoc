@@ -18,7 +18,7 @@ The block explorer application shows a transaction from Alice's "address" to Bob
 
 [[alices_transactions_to_bobs_cafe]]
 .Alice's transaction to Bob's Cafe
-![loafwallet insight](https://user-images.githubusercontent.com/32662508/48391871-9783ba00-e6bd-11e8-9f50-b5dcc87f33d7.png)
+image::https://user-images.githubusercontent.com/32662508/48391871-9783ba00-e6bd-11e8-9f50-b5dcc87f33d7.png["Alice Coffee Transaction"]
 
 [[transactions_behind_the_scenes]]
 ==== Transactions&#x2014;Behind the Scenes
