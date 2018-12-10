@@ -1,26 +1,27 @@
-[[ch03_bitcoin_client]]
-== Bitcoin Core: The Reference Implementation
+[[ch03_litecoin_client]]
+== Litecoin Core: The Reference Implementation
 
-((("open source licenses")))((("Nakamoto, Satoshi")))Bitcoin is an _open source_ project and the source code is available under an open (MIT) license, free to download and use for any purpose. Open source means more than simply free to use. It also means that bitcoin is developed by an open community of volunteers. At first, that community consisted of only Satoshi Nakamoto. By 2016, bitcoin's source code had more than 400 contributors with about a dozen developers working on the code almost full-time and several dozen more on a part-time basis. Anyone can contribute to the code&#x2014;including you!
+((("open source licenses")))((("Nakamoto, Satoshi")))Litecoin is an _open source_ project and the source code is available under an open (MIT) license, free to download and use for any purpose. Open source means more than simply free to use. It also means that litecoin is developed by an open community of volunteers. As of 2018, litecoin's source has had more that 500 contributors.  Anyone can contribute to the code&#x2014;including you!  However, it is important to note that Litecoin Core's development closely follows Bitcoin Core's.  This is so that Litecoin can continue to maintain its position as the silver to bitcoin's gold.    
 
+=== What is Litecoin Core?
 
-((("bitcoin whitepaper")))((("Satoshi client")))((("reference implementation", see="Bitcoin Core")))((("Bitcoin Core", "reference implementation")))When bitcoin was created by Satoshi Nakamoto, the software was actually completed before the whitepaper reproduced in <<satoshi_whitepaper>> was written. Satoshi wanted to make sure it worked before writing about it. That first implementation, then simply known as "Bitcoin" or "Satoshi client," has been heavily modified and improved. It has evolved into what is known as _Bitcoin Core_, to differentiate it from other compatible implementations. Bitcoin Core is the _reference implementation_ of the bitcoin system, meaning that it is the authoritative reference on how each part of the technology should be implemented. Bitcoin Core implements all aspects of bitcoin, including wallets, a transaction and block validation engine, and a full network node in the peer-to-peer bitcoin network.
+Litecoin Core is the _reference implementation_ of the litecoin system, meaning that it is the authoritative reference on how each part of the technology should be implemented. Litecoin Core implements all aspects of litecoin, including wallets, a transaction and block validation engine, and a full network node in the peer-to-peer litecoin network.
 
 [WARNING]
 ====
-((("wallets", "best practices for")))((("bitcoin improvement proposals", "Mnemonic Code Words (BIP-39)")))((("bitcoin improvement proposals", "Hierarchical Deterministic Wallets (BIP-32/BIP-44)")))Even though Bitcoin Core includes a reference implementation of a wallet, this is not intended to be used as a production wallet for users or for applications. Application developers are advised to build wallets using modern standards such as BIP-39 and BIP-32 (see <<mnemonic_code_words>> and <<hd_wallets>>). BIP stands for _Bitcoin Improvement Proposal_.
+((("wallets", "best practices for")))((("bitcoin improvement proposals", "Mnemonic Code Words (BIP-39)")))((("bitcoin improvement proposals", "Hierarchical Deterministic Wallets (BIP-32/BIP-44)")))Even though Litecoin Core includes a reference implementation of a wallet, this is not intended to be used as a production wallet for users or for applications. Application developers are advised to build wallets using modern standards such as BIP-39 and BIP-32 (see <<mnemonic_code_words>> and <<hd_wallets>>). BIP stands for _Bitcoin Improvement Proposal_ which litecoin also closely follows for the most part.
 ====
 
-<<bitcoin_core_architecture>> shows the architecture of Bitcoin Core.((("Bitcoin Core", "architecture")))
+<<litecoin_core_architecture>> shows the architecture of Litecoin Core.((("Litecoin Core", "architecture")))
 
-[[bitcoin_core_architecture]]
-.Bitcoin Core architecture (Source: Eric Lombrozo)
-image::images/mbc2_0301.png["Bitcoin Core Architecture"]
+[[litecoin_core_architecture]]
+.Litecoin Core architecture (Source: Eric Lombrozo)
+image::https://user-images.githubusercontent.com/32662508/48244414-86276e80-e39a-11e8-99f7-4a699ed0753a.jpg["Litecoin Core Architecture"]
 
 
-=== Bitcoin Development Environment
+=== Litecoin Development Environment
 
-((("development environment", "setup", see="Bitcoin Core")))If you're a developer, you will want to set up a development environment with all the tools, libraries, and support software for writing bitcoin applications. In this highly technical chapter, we'll walk through that process step-by-step. If the material becomes too dense (and you're not actually setting up a development environment) feel free to skip to the next chapter, which is less technical.
+((("development environment", "setup", see="Litecoin Core")))If you're a developer, you will want to set up a development environment with all the tools, libraries, and support software for writing litecoin applications. In this highly technical chapter, we'll walk through that process step-by-step. If the material becomes too dense (and you're not actually setting up a development environment) feel free to skip to the next chapter, which is less technical.
 
 [[compiling_core]]
 === Compiling Bitcoin Core from the Source Code
