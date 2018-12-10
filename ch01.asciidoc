@@ -96,6 +96,16 @@ Mining for bitcoin::
 
 Each of these stories is based on the real people and real industries currently using bitcoin to create new markets, new industries, and innovative solutions to global economic issues.((("", startref="GSuses01")))
 
+=== How Is Litecoin Different?
+
+There are currently three main differences between litecoin and bitcoin:
+
++ Speed- Litecoin is confirmed faster than bitcoin because it generates a block every 2.5 minutes as opposed to bitcoin’s 10 minutes. 
+
++ Supply- Litecoin will produce a total of 84 million coins as opposed to bitcoin’s 21 million.
+
++ Mining algorithm- Litecoin uses a Scrypt mining algorithm as opposed to bitcoin's SHA-256.  This means that bitcoin's powerful Application Specific Integrated Circuits (ASIC) miners aren't able to be used on litecoin.  This protects litecoin from being overrun by bitcoin miners.  
+
 === Getting Started
 
 ((("getting started", "wallet selection", id="GSwallet01")))((("wallets", "selecting", id="Wselect01")))((("bitcoin", "getting started", id="BCbasic01")))Bitcoin is a protocol that can be accessed using a client application that speaks the protocol. A "bitcoin wallet" is the most common user interface to the bitcoin system, just like a web browser is the most common user interface for the HTTP protocol. There are many implementations and brands of bitcoin wallets, just like there are many brands of web browsers (e.g., Chrome, Safari, Firefox, and Internet Explorer). And just like we all have our favorite browsers (Mozilla Firefox, Yay!) and our villains (Internet Explorer, Yuck!), bitcoin wallets vary in quality, performance, security, privacy, and reliability. There is also a reference implementation of the bitcoin protocol that includes a wallet, known as the "Satoshi Client" or "Bitcoin Core," which is derived from the original implementation written by Satoshi Nakamoto.
