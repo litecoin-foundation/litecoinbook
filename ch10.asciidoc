@@ -4,46 +4,46 @@
 
 === Introduction
 
-((("mining and consensus", "purpose of")))The word "mining" is somewhat misleading. By evoking the extraction of precious metals, it focuses our attention on the reward for mining, the new bitcoin created in each block. Although mining is incentivized by this reward, the primary purpose of mining is not the reward or the generation of new coins. If you view mining only as the process by which coins are created, you are mistaking the means (incentives) as the goal of the process. Mining is the mechanism that underpins the decentralized clearinghouse, by which transactions are validated and cleared. Mining is the invention that makes bitcoin special, a decentralized security mechanism that is the basis for P2P digital cash.
+((("mining and consensus", "purpose of")))The word "mining" is somewhat misleading. By evoking the extraction of precious metals, it focuses our attention on the reward for mining, the new litecoin created in each block. Although mining is incentivized by this reward, the primary purpose of mining is not the reward or the generation of new coins. If you view mining only as the process by which coins are created, you are mistaking the means (incentives) as the goal of the process. Mining is the mechanism that underpins the decentralized clearinghouse, by which transactions are validated and cleared. Mining is the invention that makes litecoin special, a decentralized security mechanism that is the basis for P2P digital cash.
 
-((("mining and consensus", "decentralized consensus")))((("central trusted authority")))Mining _secures the bitcoin system_ and enables the emergence of network-wide _consensus without a central authority_. ((("fees", "transaction fees")))The reward of newly minted coins and transaction fees is an incentive scheme that aligns the actions of miners with the security of the network, while simultaneously implementing the monetary supply.
+((("mining and consensus", "decentralized consensus")))((("central trusted authority")))Mining _secures the litecoin system_ and enables the emergence of network-wide _consensus without a central authority_. ((("fees", "transaction fees")))The reward of newly minted coins and transaction fees is an incentive scheme that aligns the actions of miners with the security of the network, while simultaneously implementing the monetary supply.
 
 [TIP]
 ====
-((("decentralized systems", "bitcoin mining and")))The purpose of mining is not the creation of new bitcoin. That's the incentive system. Mining is the mechanism by which bitcoin's _security_ is _decentralized_.
+((("decentralized systems", "litecoin mining and")))The purpose of mining is not the creation of new litecoin. That's the incentive system. Mining is the mechanism by which litecoin's _security_ is _decentralized_.
 ====
 
-Miners validate new transactions and record them on the global ledger. A new block, containing transactions that occurred since the last block, is "mined" every 10 minutes on average, thereby adding those transactions to the blockchain. Transactions that become part of a block and added to the blockchain are considered "confirmed," which allows the new owners of bitcoin to spend the bitcoin they received in those transactions.
+Miners validate new transactions and record them on the global ledger. A new block, containing transactions that occurred since the last block, is "mined" every 10 minutes on average, thereby adding those transactions to the blockchain. Transactions that become part of a block and added to the blockchain are considered "confirmed," which allows the new owners of litecoin to spend the litecoin they received in those transactions.
 
-((("fees", "mining rewards")))((("mining and consensus", "mining rewards and fees")))((("Proof-of-Work algorithm")))((("mining and consensus", "Proof-of-Work algorithm")))Miners receive two types of rewards in return for the security provided by mining: new coins created with each new block, and transaction fees from all the transactions included in the block. To earn this reward, miners compete to solve a difficult mathematical problem based on a cryptographic hash algorithm. The solution to the problem, called the Proof-of-Work, is included in the new block and acts as proof that the miner expended significant computing effort. The competition to solve the Proof-of-Work algorithm to earn the reward and the right to record transactions on the blockchain is the basis for bitcoin's security model.
+((("fees", "mining rewards")))((("mining and consensus", "mining rewards and fees")))((("Proof-of-Work algorithm")))((("mining and consensus", "Proof-of-Work algorithm")))Miners receive two types of rewards in return for the security provided by mining: new coins created with each new block, and transaction fees from all the transactions included in the block. To earn this reward, miners compete to solve a difficult mathematical problem based on a cryptographic hash algorithm. The solution to the problem, called the Proof-of-Work, is included in the new block and acts as proof that the miner expended significant computing effort. The competition to solve the Proof-of-Work algorithm to earn the reward and the right to record transactions on the blockchain is the basis for litecoin's security model.
 
-The process is called mining because the reward (new coin generation) is designed to simulate diminishing returns, just like mining for precious metals. Bitcoin's money supply is created through mining, similar to how a central bank issues new money by printing bank notes. The maximum amount of newly created bitcoin a miner can add to a block decreases approximately every four years (or precisely every 210,000 blocks). It started at 50 bitcoin per block in January of 2009 and halved to 25 bitcoin per block in November of 2012. It halved again to 12.5 bitcoin in July 2016. Based on this formula, bitcoin mining rewards decrease exponentially until approximately the year 2140, when all bitcoin (20.99999998 million) will have been issued. After 2140, no new bitcoin will be issued.
+The process is called mining because the reward (new coin generation) is designed to simulate diminishing returns, just like mining for precious metals. Litecoin's money supply is created through mining, similar to how a central bank issues new money by printing bank notes. The maximum amount of newly created litecoin a miner can add to a block decreases approximately every four years (or precisely every 840,000 blocks). It started at 50 litecoin per block in October of 2011 and halved to 25 litecoin per block in August of 2015. Based on this formula, litecoin mining rewards decrease exponentially until approximately the year 2143, when all litecoin (83.99999998 million) will have been issued. After 2143, no new litecoin will be issued.
 
-Bitcoin miners also earn fees from transactions. Every transaction may include a transaction fee, in the form of a surplus of bitcoin between the transaction's inputs and outputs. The winning bitcoin miner gets to "keep the change" on the transactions included in the winning block. Today, the fees represent 0.5% or less of a bitcoin miner's income, the vast majority coming from the newly minted bitcoin. However, as the reward decreases over time and the number of transactions per block increases, a greater proportion of bitcoin mining earnings will come from fees. Gradually, the mining reward will be dominated by transaction fees, which will form the primary incentive for miners. After 2140, the amount of new bitcoin in each block drops to zero and bitcoin mining will be incentivized only by transaction fees.
+Litecoin miners also earn fees from transactions. Every transaction may include a transaction fee, in the form of a surplus of litecoin between the transaction's inputs and outputs. The winning litecoin miner gets to "keep the change" on the transactions included in the winning block. Today, the fees represent 0.5% or less of a litecoin miner's income, the vast majority coming from the newly minted litecoin. However, as the reward decreases over time and the number of transactions per block increases, a greater proportion of litecoin mining earnings will come from fees. Gradually, the mining reward will be dominated by transaction fees, which will form the primary incentive for miners. After 2143, the amount of new litecoin in each block drops to zero and litecoin mining will be incentivized only by transaction fees.
 
-In this chapter, we will first examine mining as a monetary supply mechanism and then look at the most important function of mining: the decentralized consensus mechanism that underpins bitcoin's security.
+In this chapter, we will first examine mining as a monetary supply mechanism and then look at the most important function of mining: the decentralized consensus mechanism that underpins litecoin's security.
 
-To understand mining and consensus, we will follow Alice's transaction as it is received and added to a block by Jing's mining equipment. Then we will follow the block as it is mined, added to the blockchain, and accepted by the bitcoin network through the process of emergent consensus.
+To understand mining and consensus, we will follow Alice's transaction as it is received and added to a block by Jing's mining equipment. Then we will follow the block as it is mined, added to the blockchain, and accepted by the litecoin network through the process of emergent consensus.
 
-==== Bitcoin Economics and Currency Creation
+==== Litecoin Economics and Currency Creation
 
-((("mining and consensus", "bitcoin economics and currency creation")))((("currency creation")))((("money supply")))((("issuance rate")))Bitcoin are "minted" during the creation of each block at a fixed and diminishing rate. Each block, generated on average every 10 minutes, contains entirely new bitcoin, created from nothing. Every 210,000 blocks, or approximately every four years, the currency issuance rate is decreased by 50%. For the first four years of operation of the network, each block contained 50 new bitcoin.
+((("mining and consensus", "litecoin economics and currency creation")))((("currency creation")))((("money supply")))((("issuance rate")))Litecoin are "minted" during the creation of each block at a fixed and diminishing rate. Each block, generated on average every 2.5 minutes, contains entirely new litecoin, created from nothing. Every 840,000 blocks, or approximately every four years, the currency issuance rate is decreased by 50%. For the first four years of operation of the network, each block contained 50 new litecoin.
 
-In November 2012, the new bitcoin issuance rate was decreased to 25 bitcoin per block. In July of 2016 it was decreased again to 12.5 bitcoin per block. It will halve again to 6.25 bitcoin at block 630,000, which will be mined sometime in 2020. The rate of new coins decreases like this exponentially over 32 "halvings" until block 6,720,000 (mined approximately in year 2137), when it reaches the minimum currency unit of 1 satoshi. Finally, after 6.93 million blocks, in approximately 2140, almost 2,099,999,997,690,000 satoshis, or almost 21 million bitcoin, will be issued. Thereafter, blocks will contain no new bitcoin, and miners will be rewarded solely through the transaction fees. <<bitcoin_money_supply>> shows the total bitcoin in circulation over time, as the issuance of currency decreases.
+In August 2015, the new litecoin issuance rate was decreased to 25 litecoin per block. It will halve again to 12.5 litecoin at block 2,520,000, which will be mined sometime in August 2019. The rate of new coins decreases like this exponentially over 32 "halvings" until block 26,880,000 (mined approximately in year 2140), when it reaches the minimum currency unit of 1 litoshi. Finally, after 27.72 million blocks, in approximately 2143, almost 8,399,999,997,690,000 litoshis, or almost 84 million litecoin, will be issued. Thereafter, blocks will contain no new litecoin, and miners will be rewarded solely through the transaction fees. <<litecoin_money_supply>> shows the total litecoin in circulation over time, as the issuance of currency decreases.
 
-[[bitcoin_money_supply]]
-.Supply of bitcoin currency over time based on a geometrically decreasing issuance rate
-image::images/mbc2_1001.png["BitcoinMoneySupply"]
+[[litecoin_money_supply]]
+.Supply of litecoin currency over time based on a geometrically decreasing issuance rate
+image::images/mbc2_1001.png["LitecoinMoneySupply"]
 
 [NOTE]
 ====
-The maximum number of coins mined is the _upper limit_ of possible mining rewards for bitcoin. In practice, a miner may intentionally mine a block taking less than the full reward. Such blocks have already been mined and more may be mined in the future, resulting in a lower total issuance of the currency.
+The maximum number of coins mined is the _upper limit_ of possible mining rewards for litecoin. In practice, a miner may intentionally mine a block taking less than the full reward. Such blocks have already been mined and more may be mined in the future, resulting in a lower total issuance of the currency.
 ====
 
-In the example code in <<max_money>>, we calculate the total amount of bitcoin that will be issued.
+In the example code in <<max_money>>, we calculate the total amount of litecoin that will be issued.
 
 [[max_money]]
-.A script for calculating how much total bitcoin will be issued
+.A script for calculating how much total litecoin will be issued
 ====
 [source, python]
 ----
@@ -63,7 +63,7 @@ Total BTC to ever be created: 2099999997690000 Satoshis
 ----
 ====
 
-The finite and diminishing issuance creates a fixed monetary supply that resists inflation. Unlike a fiat currency, which can be printed in infinite numbers by a central bank, bitcoin can never be inflated by printing.
+The finite and diminishing issuance creates a fixed monetary supply that resists inflation. Unlike a fiat currency, which can be printed in infinite numbers by a central bank, litecoin can never be inflated by printing.
 
 .Deflationary Money
 ****
@@ -71,7 +71,7 @@ The finite and diminishing issuance creates a fixed monetary supply that resists
 
 Many economists argue that a deflationary economy is a disaster that should be avoided at all costs. That is because in a period of rapid deflation, people tend to hoard money instead of spending it, hoping that prices will fall. Such a phenomenon unfolded during Japan's "Lost Decade," when a complete collapse of demand pushed the currency into a deflationary spiral.
 
-Bitcoin experts argue that deflation is not bad per se. Rather, deflation is associated with a collapse in demand because that is the only example of deflation we have to study. In a fiat currency with the possibility of unlimited printing, it is very difficult to enter a deflationary spiral unless there is a complete collapse in demand and an unwillingness to print money. Deflation in bitcoin is not caused by a collapse in demand, but by a predictably constrained supply.
+Litecoin experts argue that deflation is not bad per se. Rather, deflation is associated with a collapse in demand because that is the only example of deflation we have to study. In a fiat currency with the possibility of unlimited printing, it is very difficult to enter a deflationary spiral unless there is a complete collapse in demand and an unwillingness to print money. Deflation in litecoin is not caused by a collapse in demand, but by a predictably constrained supply.
 
 The positive aspect of deflation, of course, is that it is the opposite of inflation. Inflation causes a slow but inevitable debasement of currency, resulting in a form of hidden taxation that punishes savers in order to bail out debtors (including the biggest debtors, governments themselves). Currencies under government control suffer from the moral hazard of easy debt issuance that can later be erased through debasement at the expense of savers.
 
@@ -80,13 +80,13 @@ It remains to be seen whether the deflationary aspect of the currency is a probl
 
 === Decentralized Consensus
 
-((("mining and consensus", "decentralized consensus")))((("decentralized systems", "consensus in")))In the previous chapter we looked at the blockchain, the global public ledger (list) of all transactions, which everyone in the bitcoin network accepts as the authoritative record of ownership.
+((("mining and consensus", "decentralized consensus")))((("decentralized systems", "consensus in")))In the previous chapter we looked at the blockchain, the global public ledger (list) of all transactions, which everyone in the litecoin network accepts as the authoritative record of ownership.
 
-But how can everyone in the network agree on a single universal "truth" about who owns what, without having to trust anyone? All traditional payment systems depend on a trust model that has a central authority providing a clearinghouse service, basically verifying and clearing all transactions. Bitcoin has no central authority, yet somehow every full node has a complete copy of a public ledger that it can trust as the authoritative record. The blockchain is not created by a central authority, but is assembled independently by every node in the network. Somehow, every node in the network, acting on information transmitted across insecure network connections, can arrive at the same conclusion and assemble a copy of the same public ledger as everyone else. This chapter examines the process by which the bitcoin network achieves global consensus without central authority.
+But how can everyone in the network agree on a single universal "truth" about who owns what, without having to trust anyone? All traditional payment systems depend on a trust model that has a central authority providing a clearinghouse service, basically verifying and clearing all transactions. Litecoin has no central authority, yet somehow every full node has a complete copy of a public ledger that it can trust as the authoritative record. The blockchain is not created by a central authority, but is assembled independently by every node in the network. Somehow, every node in the network, acting on information transmitted across insecure network connections, can arrive at the same conclusion and assemble a copy of the same public ledger as everyone else. This chapter examines the process by which the litecoin network achieves global consensus without central authority.
 
-((("emergent consensus")))((("mining and consensus", "emergent consensus")))Satoshi Nakamoto's main invention is the decentralized mechanism for _emergent consensus_. Emergent, because consensus is not achieved explicitly—there is no election or fixed moment when consensus occurs. Instead, consensus is an emergent artifact of the asynchronous interaction of thousands of independent nodes, all following simple rules. All the properties of bitcoin, including currency, transactions, payments, and the security model that does not depend on central authority or trust, derive from this invention.
+((("emergent consensus")))((("mining and consensus", "emergent consensus")))Satoshi Nakamoto's main invention is the decentralized mechanism for _emergent consensus_. Emergent, because consensus is not achieved explicitly—there is no election or fixed moment when consensus occurs. Instead, consensus is an emergent artifact of the asynchronous interaction of thousands of independent nodes, all following simple rules. All the properties of litecoin, including currency, transactions, payments, and the security model that does not depend on central authority or trust, derive from this invention.
 
-Bitcoin's decentralized consensus emerges from the interplay of four processes that occur independently on nodes across the network:
+Litecoin's decentralized consensus emerges from the interplay of four processes that occur independently on nodes across the network:
 
 [role="pagebreak-before"]
 * Independent verification of each transaction, by every full node, based on a comprehensive list of criteria
@@ -94,14 +94,14 @@ Bitcoin's decentralized consensus emerges from the interplay of four processes t
 * Independent verification of the new blocks by every node and assembly into a chain
 * Independent selection, by every node, of the chain with the most cumulative computation demonstrated through Proof-of-Work
 
-In the next few sections we will examine these processes and how they interact to create the emergent property of network-wide consensus that allows any bitcoin node to assemble its own copy of the authoritative, trusted, public, global ledger.
+In the next few sections we will examine these processes and how they interact to create the emergent property of network-wide consensus that allows any litecoin node to assemble its own copy of the authoritative, trusted, public, global ledger.
 
 [[tx_verification]]
 === Independent Verification of Transactions
 
-((("mining and consensus", "independent transaction verification")))((("transactions", "independent verification of")))In <<transactions>>, we saw how wallet software creates transactions by collecting UTXO, providing the appropriate unlocking scripts, and then constructing new outputs assigned to a new owner. The resulting transaction is then sent to the neighboring nodes in the bitcoin network so that it can be propagated across the entire bitcoin network.
+((("mining and consensus", "independent transaction verification")))((("transactions", "independent verification of")))In <<transactions>>, we saw how wallet software creates transactions by collecting UTXO, providing the appropriate unlocking scripts, and then constructing new outputs assigned to a new owner. The resulting transaction is then sent to the neighboring nodes in the litecoin network so that it can be propagated across the entire litecoin network.
 
-However, before forwarding transactions to its neighbors, every bitcoin node that receives a transaction will first verify the transaction. This ensures that only valid transactions are propagated across the network, while invalid transactions are discarded at the first node that encounters them.
+However, before forwarding transactions to its neighbors, every litecoin node that receives a transaction will first verify the transaction. This ensures that only valid transactions are propagated across the network, while invalid transactions are discarded at the first node that encounters them.
 
 Each node verifies every transaction against a long checklist of criteria:
 
@@ -124,19 +124,19 @@ Each node verifies every transaction against a long checklist of criteria:
 * Reject if transaction fee would be too low (+minRelayTxFee+) to get into an empty block.
 * The unlocking scripts for each input must validate against the corresponding output locking scripts.
 
-These conditions can be seen in detail in the functions +AcceptToMemoryPool+, +CheckTransaction+, and +CheckInputs+ in Bitcoin Core. Note that the conditions change over time, to address new types of denial-of-service attacks or sometimes to relax the rules so as to include more types of transactions.
+These conditions can be seen in detail in the functions +AcceptToMemoryPool+, +CheckTransaction+, and +CheckInputs+ in Litecoin Core. Note that the conditions change over time, to address new types of denial-of-service attacks or sometimes to relax the rules so as to include more types of transactions.
 
 By independently verifying each transaction as it is received and before propagating it, every node builds a pool of valid (but unconfirmed) transactions known as the _transaction pool_, _memory pool_, or _mempool_.
 
 === Mining Nodes
 
-((("mining and consensus", "mining nodes")))((("bitcoin nodes", "mining nodes")))Some of the nodes on the bitcoin network are specialized nodes called _miners_. In <<ch01_intro_what_is_bitcoin>> we introduced ((("use cases", "mining for bitcoin", id="jingten")))Jing, a computer engineering student in Shanghai, China, who is a bitcoin miner. Jing earns bitcoin by running a "mining rig," which is a specialized computer-hardware system designed to mine bitcoin. Jing's specialized mining hardware is connected to a server running a full bitcoin node. Unlike Jing, some miners mine without a full node, as we will see in <<mining_pools>>. Like every other full node, Jing's node receives and propagates unconfirmed transactions on the bitcoin network. Jing's node, however, also aggregates these transactions into new blocks.
+((("mining and consensus", "mining nodes")))((("litecoin nodes", "mining nodes")))Some of the nodes on the litecoin network are specialized nodes called _miners_. In <<ch01_intro_what_is_litecoin>> we introduced ((("use cases", "mining for litecoin", id="jingten")))Jing, a computer engineering student in Shanghai, China, who is a litecoin miner. Jing earns litecoin by running a "mining rig," which is a specialized computer-hardware system designed to mine litecoin. Jing's specialized mining hardware is connected to a server running a full litecoin node. Unlike Jing, some miners mine without a full node, as we will see in <<mining_pools>>. Like every other full node, Jing's node receives and propagates unconfirmed transactions on the litecoin network. Jing's node, however, also aggregates these transactions into new blocks.
 
-Jing's node is listening for new blocks, propagated on the bitcoin network, as do all nodes. However, the arrival of a new block has special significance for a mining node. The competition among miners effectively ends with the propagation of a new block that acts as an announcement of a winner. To miners, receiving a valid new block means someone else won the competition and they lost. However, the end of one round of a competition is also the beginning of the next round. The new block is not just a checkered flag, marking the end of the race; it is also the starting pistol in the race for the next block.
+Jing's node is listening for new blocks, propagated on the litecoin network, as do all nodes. However, the arrival of a new block has special significance for a mining node. The competition among miners effectively ends with the propagation of a new block that acts as an announcement of a winner. To miners, receiving a valid new block means someone else won the competition and they lost. However, the end of one round of a competition is also the beginning of the next round. The new block is not just a checkered flag, marking the end of the race; it is also the starting pistol in the race for the next block.
 
 === Aggregating Transactions into Blocks
 
-((("mining and consensus", "aggregating transactions into blocks", id="MACaggreg10")))((("transactions", "aggregating into blocks", id="Taggreg10")))((("blocks", "aggregating transactions into", id="Baggreg10")))((("blocks", "candidate blocks")))((("candidate blocks")))((("transaction pools")))((("memory pools (mempools)")))After validating transactions, a bitcoin node will add them to the _memory pool_, or _transaction pool_, where transactions await until they can be included (mined) into a block. Jing's node collects, validates, and relays new transactions just like any other node. Unlike other nodes, however, Jing's node will then aggregate these transactions into a _candidate block_.
+((("mining and consensus", "aggregating transactions into blocks", id="MACaggreg10")))((("transactions", "aggregating into blocks", id="Taggreg10")))((("blocks", "aggregating transactions into", id="Baggreg10")))((("blocks", "candidate blocks")))((("candidate blocks")))((("transaction pools")))((("memory pools (mempools)")))After validating transactions, a litecoin node will add them to the _memory pool_, or _transaction pool_, where transactions await until they can be included (mined) into a block. Jing's node collects, validates, and relays new transactions just like any other node. Unlike other nodes, however, Jing's node will then aggregate these transactions into a _candidate block_.
 
 Let's follow the blocks that were created during the time Alice bought a cup of coffee from Bob's Cafe (see <<cup_of_coffee>>). Alice's transaction was included in block 277,316. For the purpose of demonstrating the concepts in this chapter, let's assume that block was mined by Jing's mining system and follows Alice's transaction as it becomes part of this new block.
 
@@ -144,20 +144,20 @@ Jing's mining node maintains a local copy of the blockchain. By the time ((("use
 
 During the previous 10 minutes, while Jing's node was searching for a solution to block 277,315, it was also collecting transactions in preparation for the next block. By now it has collected a few hundred transactions in the memory pool. Upon receiving block 277,315 and validating it, Jing's node will also compare it against all the transactions in the memory pool and remove any that were included in block 277,315. Whatever transactions remain in the memory pool are unconfirmed and are waiting to be recorded in a new block.
 
-((("Proof-of-Work algorithm")))((("mining and consensus", "Proof-of-Work algorithm")))Jing's node immediately constructs a new empty block, a candidate for block 277,316. This block is called a _candidate block_ because it is not yet a valid block, as it does not contain a valid Proof-of-Work. The block becomes valid only if the miner succeeds in finding a solution to the Proof-of-Work algorithm.
+((("Proof-of-Work algorithm")))((("mining and consensus", "Proof-of-Work algorithm")))Jing's node immediately constructs a new empty block, a candidate for block 1,526,033. This block is called a _candidate block_ because it is not yet a valid block, as it does not contain a valid Proof-of-Work. The block becomes valid only if the miner succeeds in finding a solution to the Proof-of-Work algorithm.
 
-When Jing's node aggregates all the transactions from the memory pool, the new candidate block has 418 transactions with total transaction fees of 0.09094928 bitcoin. You can see this block in the blockchain using the Bitcoin Core client command-line interface, as shown in <<block277316>>.
+When Jing's node aggregates all the transactions from the memory pool, the new candidate block has 22 transactions with total transaction fees of 0.00520702 litecoin. You can see this block in the blockchain using the Litecoin Core client command-line interface, as shown in <<block1526033>>.
 
-[[block277316]]
+[[block1526033]]
 .Using the command line to retrieve block 277,316
 ====
 [source,bash]
 ----
-$ bitcoin-cli getblockhash 277316
+$ litecoin-cli getblockhash 1526033
 
-0000000000000001b6b9a13b095e96db41c4a928b97ef2d944a9b31b2cc7bdc4
+a4311c9dfc305307614a3ac77dae5f629f9a84a372497debdf7f59769564a11f
 
-$ bitcoin-cli getblock 0000000000000001b6b9a13b095e96db41c4a928b97ef2d9\
+$ litecoin-cli getblock 0000000000000001b6b9a13b095e96db41c4a928b97ef2d9\
 44a9b31b2cc7bdc4
 ----
 
@@ -165,26 +165,30 @@ $ bitcoin-cli getblock 0000000000000001b6b9a13b095e96db41c4a928b97ef2d9\
 [source,json]
 ----
 {
-    "hash" : "0000000000000001b6b9a13b095e96db41c4a928b97ef2d944a9b31b2cc7bdc4",
-    "confirmations" : 35561,
-    "size" : 218629,
-    "height" : 277316,
-    "version" : 2,
-    "merkleroot" : "c91c008c26e50763e9f548bb8b2fc323735f73577effbc55502c51eb4cc7cf2e",
-    "tx" : [
-        "d5ada064c6417ca25c4308bd158c34b77e1c0eca2a73cda16c737e7424afba2f",
-        "b268b45c59b39d759614757718b9918caf0ba9d97c56f3b91956ff877c503fbe",
+  "hash": "a4311c9dfc305307614a3ac77dae5f629f9a84a372497debdf7f59769564a11f",
+  "confirmations": 1072,
+  "strippedsize": 6144,
+  "size": 6729,
+  "weight": 25161,
+  "height": 1526033,
+  "version": 536870912,
+  "versionHex": "20000000",
+  "merkleroot": "5b2373c9a5eeb722f64a6fbdff3d12383cfa7bbae9a85ae6d95df9df2af9d393",
+  "tx": [
+    "a5db601f5dbbf392d71038ec154e6c543bacae364d59e8f7bf59f3dda4639deb",
+    "554bb0371bf6ae7347273d9adf9f281a27b57752f719c27bf1cac4f3bbc929af",
 
-        ... 417 more transactions ...
+        ... 20 more transactions ...
 
-       ],
-    "time" : 1388185914,
-    "nonce" : 924591752,
-    "bits" : "1903a30c",
-    "difficulty" : 1180923195.25802612,
-    "chainwork" : "000000000000000000000000000000000000000000000934695e92aaf53afa1a",
-    "previousblockhash" : "0000000000000002a7bbd25a417c0374cc55261021e8a9ca74442b01284f0569"
-}
+ "time": 1542091695,
+  "mediantime": 1542090296,
+  "nonce": 944226907,
+  "bits": "1a020b3c",
+  "difficulty": 8208370.789858751,
+  "chainwork": "000000000000000000000000000000000000000000000176340789ca0fba8288",
+  "nTx": 22,
+  "previousblockhash": "c077466a6457560498c88cc696ea4bd186b3f1b99610fd81cf1975642f96426d",
+  "nextblockhash": "29627f9353475e8de3503d4de22a2d69f26dd8110e19188009cadf6db2c96ccc"
 ----
 ====
 
@@ -194,7 +198,7 @@ $ bitcoin-cli getblock 0000000000000001b6b9a13b095e96db41c4a928b97ef2d9\
 
 [NOTE]
 ====
-When block 277,316 was mined, the reward was 25 bitcoin per block. Since then, one "halving" period has elapsed. The block reward changed to 12.5 bitcoin in July 2016. It will be halved again in 210,000 blocks, in the year 2020.
+When block 277,316 was mined, the reward was 25 litecoin per block. Since then, one "halving" period has elapsed. The block reward changed to 12.5 bitcoin in July 2016. It will be halved again in 210,000 blocks, in the year 2020.
 ====
 
 Jing's node creates the coinbase transaction as a payment to his own wallet: "Pay Jing's address 25.09094928 bitcoin." The total amount of reward that Jing collects for mining a block is the sum of the coinbase reward (25 new bitcoin) and the transaction fees (0.09094928) from all the transactions included in the block as shown in <<generation_tx_example>>.
