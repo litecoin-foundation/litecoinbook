@@ -767,14 +767,14 @@ In the next section we will look at how discrepancies between competing chains (
 [[forks]]
 ==== Blockchain Forks
 
-((("mining and consensus", "assembling and selecting chains of blocks", "blockchain forks")))((("blockchain (the)", "blockchain forks", id="BCTfork10")))((("forks", "blockchain fork events", id="forks10")))Because the blockchain is a decentralized data structure, different copies of it are not always consistent. Blocks might arrive at different nodes at different times, causing the nodes to have different perspectives of the blockchain. To resolve this, each node always selects and attempts to extend the chain of blocks that represents the most Proof-of-Work, also known as the longest chain or greatest cumulative work chain. By summing the work recorded in each block in a chain, a node can calculate the total amount of work that has been expended to create that chain. As long as all nodes select the greatest-cumulative-work chain, the global bitcoin network eventually converges to a consistent state. Forks occur as temporary inconsistencies between versions of the blockchain, which are resolved by eventual reconvergence as more blocks are added to one of the forks.
+((("mining and consensus", "assembling and selecting chains of blocks", "blockchain forks")))((("blockchain (the)", "blockchain forks", id="BCTfork10")))((("forks", "blockchain fork events", id="forks10")))Because the blockchain is a decentralized data structure, different copies of it are not always consistent. Blocks might arrive at different nodes at different times, causing the nodes to have different perspectives of the blockchain. To resolve this, each node always selects and attempts to extend the chain of blocks that represents the most Proof-of-Work, also known as the longest chain or greatest cumulative work chain. By summing the work recorded in each block in a chain, a node can calculate the total amount of work that has been expended to create that chain. As long as all nodes select the greatest-cumulative-work chain, the global litecoin network eventually converges to a consistent state. Forks occur as temporary inconsistencies between versions of the blockchain, which are resolved by eventual reconvergence as more blocks are added to one of the forks.
 
 [TIP]
 ====
 The blockchain forks described in this section occur naturally as a result of transmission delays in the global network. We will also look at deliberately induced forks later in this chapter.
 ====
 
-In the next few diagrams, we follow the progress of a "fork" event across the network. The diagram is a simplified representation of the bitcoin network. For illustration purposes, different blocks are shown as different shapes (star, triangle, upside-down triangle, rhombus), spreading across the network. Each node in the network is represented as a circle.
+In the next few diagrams, we follow the progress of a "fork" event across the network. The diagram is a simplified representation of the litecoin network. For illustration purposes, different blocks are shown as different shapes (star, triangle, upside-down triangle, rhombus), spreading across the network. Each node in the network is represented as a circle.
 
 Each node has its own perspective of the global blockchain. As each node receives blocks from its neighbors, it updates its own copy of the blockchain, selecting the greatest-cumulative-work chain. For illustration purposes, each node contains a shape that represents the block that it believes is currently the tip of the main chain. So, if you see a star shape in the node, that means that the star block is the tip of the main chain, as far as that node is concerned.
 
@@ -830,36 +830,35 @@ image::images/mbc2_1006.png["Visualization of a blockchain fork event: the netwo
 
 It is theoretically possible for a fork to extend to two blocks, if two blocks are found almost simultaneously by miners on opposite "sides" of a previous fork. However, the chance of that happening is very low. Whereas a one-block fork might occur every day, a two-block fork occurs at most once every few weeks.
 
-Bitcoin's block interval of 10 minutes is a design compromise between fast confirmation times (settlement of transactions) and the probability of a fork. A faster block time would make transactions clear faster but lead to more frequent blockchain forks, whereas a slower block time would decrease the number of forks but make settlement slower.((("", startref="Bassemble10")))((("", startref="MACassembling10")))((("", startref="forks10")))((("", startref="BCTfork10")))
+Litecoin's block interval of 2.5 minutes is a design compromise between fast confirmation times (settlement of transactions) and the probability of a fork. A faster block time would make transactions clear faster but lead to more frequent blockchain forks, whereas a slower block time would decrease the number of forks but make settlement slower.((("", startref="Bassemble10")))((("", startref="MACassembling10")))((("", startref="forks10")))((("", startref="BCTfork10")))
 
 === Mining and the Hashing Race
 
-((("mining and consensus", "hashing power race", id="MAChash10")))Bitcoin mining is an extremely competitive industry. The hashing power has increased exponentially every year of bitcoin's existence. Some years the growth has reflected a complete change of technology, such as in 2010 and 2011 when many miners switched from using CPU mining to GPU mining and field programmable gate array (FPGA) mining. In 2013 the introduction of ASIC mining lead to another giant leap in mining power, by placing the SHA256 function directly on silicon chips specialized for the purpose of mining. The first such chips could deliver more mining power in a single box than the entire bitcoin network in 2010.
+((("mining and consensus", "hashing power race", id="MAChash10")))Litecoin mining is an extremely competitive industry. The hashing power has increased exponentially every year of litecoin's existence. Some years the growth has reflected a complete change of technology, such as when many miners switched from using CPU mining to GPU mining and field programmable gate array (FPGA) mining. In 2014 the introduction of ASIC scrypt mining lead to another giant leap in mining power, by placing the Scrypt function directly on silicon chips specialized for the purpose of mining. 
 
-The following list shows the total hashing power of the bitcoin network, over the first eight years of operation:
+The following list shows the total hashing power of the litecoin network, over the first seven years of operation:
 
-2009:: 0.5 MH/sec–8 MH/sec (16&#x00D7; growth)
-2010:: 8 MH/sec–116 GH/sec (14,500&#x00D7; growth)
-2011:: 116 GH/sec–9 TH/sec (78&#x00D7; growth)
-2012:: 9 TH/sec–23 TH/sec (2.5&#x00D7; growth)
-2013:: 23 TH/sec–10 PH/sec (450&#x00D7; growth)
-2014:: 10 PH/sec–300 PH/sec (30&#x00D7; growth)
-2015:: 300 PH/sec-800 PH/sec (2.66&#x00D7; growth)
-2016:: 800 PH/sec-2.5 EH/sec (3.12&#x00D7; growth)
+2012:: 0.12 MH/sec–376.09 MH/sec (3,100&#x00D7; growth)
+2013:: 3.76.09 MH/sec–30.7 GH/sec (8,1600&#x00D7; growth)
+2014:: 30.7 GH/sec–968.75 GH/sec (31.5&#x00D7; growth)
+2015:: 968.75 GH/sec–1.35 TH/sec (1.4&#x00D7; growth)
+2016:: 1.35 TH/sec–1.45 TH/sec (1.070&#x00D7; growth)
+2017:: 1.45 TH/sec–28.15 TH/sec (19.41&#x00D7; growth)
+2018:: 28.15 PH/sec-260.21 TH/sec (9.24&#x00D7; growth)
 
-In the chart in <<network_hashing_power>>, we can see that bitcoin network's hashing power increased over the past two years. As you can see, the competition between miners and the growth of bitcoin has resulted in an exponential increase in the hashing power (total hashes per second across the network).
+In the chart in <<network_hashing_power>>, we can see that litecoin network's hashing power increased over the past two years. As you can see, the competition between miners and the growth of litecoin has resulted in an exponential increase in the hashing power (total hashes per second across the network).
 
 [[network_hashing_power]]
 .Total hashing power, terahashes per second (TH/sec)
-image::images/mbc2_1007.png["NetworkHashingRate"]
+image::https://user-images.githubusercontent.com/32662508/49754009-e21b3680-fc69-11e8-861d-6942280d087b.png["NetworkHashingRate"]
 
-As the amount of hashing power applied to mining bitcoin has exploded, the difficulty has risen to match it. The difficulty metric in the chart shown in <<bitcoin_difficulty>> is measured as a ratio of current difficulty over minimum difficulty (the difficulty of the first block).
+As the amount of hashing power applied to mining litecoin has exploded, the difficulty has risen to match it. The difficulty metric in the chart shown in <<litecoin_difficulty>> is measured as a ratio of current difficulty over minimum difficulty (the difficulty of the first block).
 
-[[bitcoin_difficulty]]
-.Bitcoin's mining difficulty metric
-image::images/mbc2_1008.png["BitcoinDifficulty"]
+[[litecoin_difficulty]]
+.litecoin's mining difficulty metric
+image::https://user-images.githubusercontent.com/32662508/49754201-4fc76280-fc6a-11e8-849a-94f383de1e90.png["LitecoinDifficulty"]
 
-In the last two years, the ASIC mining chips have become increasingly denser, approaching the cutting edge of silicon fabrication with a feature size (resolution) of 16 nanometers (nm). Currently, ASIC manufacturers are aiming to overtake general-purpose CPU chip manufacturers, designing chips with a feature size of 14 nm, because the profitability of mining is driving this industry even faster than general computing. There are no more giant leaps left in bitcoin mining, because the industry has reached the forefront of Moore's Law, which stipulates that computing density will double approximately every 18 months. Still, the mining power of the network continues to advance at an exponential pace as the race for higher density chips is matched with a race for higher density data centers where thousands of these chips can be deployed. It's no longer about how much mining can be done with one chip, but how many chips can be squeezed into a building, while still dissipating the heat and providing adequate power.
+In the last two years, the ASIC mining chips have become increasingly denser, approaching the cutting edge of silicon fabrication with a feature size (resolution) of 16 nanometers (nm). Currently, ASIC manufacturers are aiming to overtake general-purpose CPU chip manufacturers, designing chips with a feature size of 14 nm, because the profitability of mining is driving this industry even faster than general computing. There are no more giant leaps left in litecoin mining, because the industry has reached the forefront of Moore's Law, which stipulates that computing density will double approximately every 18 months. Still, the mining power of the network continues to advance at an exponential pace as the race for higher density chips is matched with a race for higher density data centers where thousands of these chips can be deployed. It's no longer about how much mining can be done with one chip, but how many chips can be squeezed into a building, while still dissipating the heat and providing adequate power.
 
 [[extra_nonce]]
 ==== The Extra Nonce Solution
