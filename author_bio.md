@@ -1,5 +1,5 @@
 <section data-type="colophon" class="abouttheauthor">
-  <h1>About the Original Author of Mastering Bitcoin</h1>
+  <h1>About the Original Author</h1>
   <p><strong>Andreas M. Antonopoulos</strong> is a noted technologist and serial entrepreneur who has become one of the most well-known and well-respected figures in bitcoin. As an engaging public speaker, teacher, and writer, Andreas makes complex subjects accessible and easy to understand. As an advisor, he helps startups recognize, evaluate, and navigate security and business risks.</p>
 
 <p>Andreas grew up with the internet, starting his first company, an early BBS and proto-ISP, as a teenager in his home in Greece. He earned degrees in computer science, data communications, and distributed systems from University College London (UCL)&#x2014;recently ranked among the world&#x2019;s top 10 universities. After moving to the United States, Andreas cofounded and managed a successful technology research company, and in that role advised dozens of Fortune 500 company executives on networking, security, data centers, and cloud computing. More than 200 of his articles on security, cloud computing, and data centers have been published in print and syndicated worldwide. He holds two patents in networking and security.</p>
