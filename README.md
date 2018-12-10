@@ -2,7 +2,7 @@ Code Examples: ![travis_ci](https://travis-ci.org/bitcoinbook/bitcoinbook.svg?br
 
 # Mastering Litecoin
 
-Mastering Litecoin has been forked and revised from Mastering Bitcoin for litecoin developers. Although the first two chapters cover litecoin at a level that is also approachable to non-programmers. Anyone with a basic understanding of technology can read the first two chapters to get a great understanding of litecoin.
+Mastering Litecoin has been forked and revised from Mastering Bitcoin for litecoin developers, although the first two chapters cover litecoin at a level that is also approachable to non-programmers. Anyone with a basic understanding of technology can read the first two chapters to get a great understanding of litecoin.
 
 # Issues, Errors, Comments, Contributions
 
