@@ -12,4 +12,4 @@
   <h1>About the Revisors</h1>
 <p><strong>Charlie Lee</strong> is the creator of Litecoin who previously worked for Google and Coinbase.  He currently spends his time advocating for Litecoin adoption.
 <p><strong>Thrasher</strong> is the maintainer of Litecoin Core and is employed by the Litecoin Foundation as a full time developer.
-<p><strong>Ecurrencyhodler</strong> is the author of "Understanding Litecoin", a moderator of [r/litecoin(https://www.reddit.com/r/litecoin), and COO of [BlockFuse](https://www.blockfuse.io).
+<p><strong>Ecurrencyhodler</strong> is the author of "Understanding Litecoin", a moderator of [r/litecoin](https://www.reddit.com/r/litecoin), and COO of [BlockFuse](https://www.blockfuse.io).
