@@ -100,11 +100,11 @@ Each of these stories is based on the real people and real industries currently 
 
 There are currently three main differences between litecoin and bitcoin:
 
-+ Speed- Litecoin is confirmed faster than bitcoin because it generates a block every 2.5 minutes as opposed to bitcoin’s 10 minutes. 
+- Speed- Litecoin is confirmed faster than bitcoin because it generates a block every 2.5 minutes as opposed to bitcoin’s 10 minutes. 
 
-+ Supply- Litecoin will produce a total of 84 million coins as opposed to bitcoin’s 21 million.
+- Supply- Litecoin will produce a total of 84 million coins as opposed to bitcoin’s 21 million.
 
-+ Mining algorithm- Litecoin uses a Scrypt mining algorithm as opposed to bitcoin's SHA-256.  This means that bitcoin's powerful Application Specific Integrated Circuits (ASIC) miners aren't able to be used on litecoin.  This protects litecoin from being overrun by bitcoin miners.  
+- Mining algorithm- Litecoin uses a Scrypt mining algorithm as opposed to bitcoin's SHA-256.  This means that bitcoin's powerful Application Specific Integrated Circuits (ASIC) miners aren't able to be used on litecoin.  This protects litecoin from being overrun by bitcoin miners.  
 
 === Getting Started
 
