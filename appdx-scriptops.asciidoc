@@ -1,10 +1,9 @@
 [[tx_script_ops]]
 [appendix]
 == Transaction Script Language Operators, Constants, and Symbols
-
 [NOTE]
 ====
-Tables and descriptions sourced from https://en.bitcoin.it/wiki/Script[].
+Tables and descriptions sourced from https://en.bitcoin.it/wiki/Script[] as litecoin shares the same scripting language.
 ====
 
 <<tx_script_ops_table_pushdata>> shows operators for pushing values onto the stack.((("transactions", "scripts and Script language", id="TRlang14")))((("scripting", "Script language operators, constants, and symbols", id="SCRlang14")))
