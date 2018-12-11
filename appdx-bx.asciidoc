@@ -1,7 +1,7 @@
 [[appdx_bx]]
 [appendix]
 
-== Bitcoin Explorer (bx) Commands
+== Bitcoin Explorer (bx) Commands 
 
 ((("Bitcoin Explorer (bx) commands", id="BX18_1", range="startofrange")))Bitcoin Explorer (bx) is a command-line tool that offers a variety of commands for key management and transaction construction. It is part of the libbitcoin bitcoin library.
 
