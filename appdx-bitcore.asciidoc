@@ -1,4 +1,4 @@
-[[appdx_bitcore]]
+[[appdx_bitcore]] 
 [appendix]
 
 == Bitcore
