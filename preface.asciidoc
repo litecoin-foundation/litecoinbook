@@ -123,10 +123,12 @@ Watch us on YouTube: link:$$http://www.youtube.com/oreillymedia$$[]
 Information about the original _Mastering Bitcoin_ as well as the Open Edition and translations are available on:
 link:$$https://bitcoinbook.info/$$[]
 
-Litecoin Foundation Website
+Litecoin Foundation Website:
+
 link:$$http://litecoin-foundation.org/$$[]
 
 Follow us on Twitter:
+
 link:$$https://twitter.com/SatoshiLite$$[]
 
 link:$$https://twitter.com/thrasher_au$$[]
