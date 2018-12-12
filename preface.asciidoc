@@ -80,43 +80,6 @@ However, note that the private keys used to construct addresses are either print
 DO NOT SEND MONEY TO ANY OF THE ADDRESSES IN THIS BOOK. Your money will be taken by another reader, or lost forever.((("", startref="codeuse00")))
 ====
 
-=== O'Reilly Safari
-
-[role = "safarienabled"]
-[NOTE]
-====
-pass:[<a href="http://oreilly.com/safari" class="orm:hideurl"><em class="hyperlink">Safari</em></a>] (formerly Safari Books Online) is a membership-based training and reference platform for enterprise, government, educators, and individuals.
-====
-
-Members have access to thousands of books, training videos, Learning Paths, interactive tutorials, and curated playlists from over 250 publishers, including O’Reilly Media, Harvard Business Review, Prentice Hall Professional, Addison-Wesley Professional, Microsoft Press, Sams, Que, Peachpit Press, Adobe, Focal Press, Cisco Press, John Wiley & Sons, Syngress, Morgan Kaufmann, IBM Redbooks, Packt, Adobe Press, FT Press, Apress, Manning, New Riders, McGraw-Hill, Jones & Bartlett, and Course Technology, among others.
-
-For more information, please visit pass:[<a href="http://oreilly.com/safari" class="orm:hideurl"><em>http://oreilly.com/safari</em></a>].
-
-=== How to Contact Us
-
-((("comments and questions")))((("contact information")))Please address comments and questions concerning this book to the publisher:
-
-++++
-<ul class="simplelist">
-  <li>O’Reilly Media, Inc.</li>
-  <li>1005 Gravenstein Highway North</li>
-  <li>Sebastopol, CA 95472</li>
-  <li>800-998-9938 (in the United States or Canada)</li>
-  <li>707-829-0515 (international or local)</li>
-  <li>707-829-0104 (fax)</li>
-</ul>
-++++
-
-To comment or ask technical questions about this book, send email to pass:[<a class="email" href="mailto:bookquestions@oreilly.com"><em>bookquestions@oreilly.com</em></a>].
-
-For more information about our books, courses, conferences, and news, see our website at link:$$http://www.oreilly.com$$[].
-
-Find us on Facebook: link:$$http://facebook.com/oreilly$$[]
-
-Follow us on Twitter: link:$$http://twitter.com/oreillymedia$$[]
-
-Watch us on YouTube: link:$$http://www.youtube.com/oreillymedia$$[]
-
 [role="pagebreak-before"]
 === Contacting the Revisors
 
