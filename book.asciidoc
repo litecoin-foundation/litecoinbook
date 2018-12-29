@@ -1,4 +1,4 @@
-= Mastering Bitcoin
+= Mastering Litecoin
 
 include::preface.asciidoc[]
 
