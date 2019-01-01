@@ -1,6 +1,6 @@
 # Mastering Litecoin
 
-This book is a derivative of "[Mastering Bitcoin](https://github.com/bitcoinbook/bitcoinbook)" by Andreas M. Antonopoulos, used under [ Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).  "Mastering Litecoin" is licensed under [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) by The Litecoin Foundation.  The book has been modified by replacing bitcoin with litecoin, adding information pertinent to litecoin, and editing examples and graphics to be litecoin specific.  
+This book is a derivative of "[Mastering Bitcoin](https://github.com/bitcoinbook/bitcoinbook)" by Andreas M. Antonopoulos, used under [ Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).  "Mastering Litecoin" is licensed under [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) by The Litecoin Foundation.  The original content has been modified by replacing bitcoin with litecoin, adding Litecoin pertinent information when appropriate, and editing graphics to be litecoin specific.  
 
 Revised by Andrew Yang, Adrian Gallagher, and Charlie Lee.
 
@@ -12,5 +12,5 @@ Designed by The Tokens Agency.
 
 First edition, January 2019
 
-ISBN: 
+ISBN (E-Book): 978-981-14-0345-3
 
