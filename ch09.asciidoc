@@ -330,7 +330,7 @@ In the future it is likely we will see other testnet blockchains that are specif
 
 ==== Regtest&#x2014;The Local Blockchain
 
-((("regtest (Regression Testing)")))Regtest, which stands for "Regression Testing," is a Bitcoin Core feature that allows you to create a local blockchain for testing purposes. Unlike testnet3, which is a public and shared test blockchain, the regtest blockchains are intended to be run as closed systems for local testing. You launch a regtest blockchain from scratch, creating a local genesis block. You may add other nodes to the network, or run it with a single node only to test the Bitcoin Core software.
+((("regtest (Regression Testing)")))Regtest, which stands for "Regression Testing," is a Bitcoin Core feature that allows you to create a local blockchain for testing purposes. Unlike testnet, which is a public and shared test blockchain, the regtest blockchains are intended to be run as closed systems for local testing. You launch a regtest blockchain from scratch, creating a local genesis block. You may add other nodes to the network, or run it with a single node only to test the Bitcoin Core software.
 
 To start Bitcoin Core in regtest mode, you use the +regtest+ flag:
 
@@ -385,6 +385,6 @@ $ bitcoin-cli -regtest getbalance
 
 === Using Test Blockchains for Development
 
-((("development environment", "test blockchains and")))Bitcoin's various blockchains (+regtest+, +segnet+, +testnet3+, +mainnet+) offer a range of testing environments for bitcoin development. Use the test blockchains whether you are developing for Bitcoin Core, or another full-node consensus client; an application such as a wallet, exchange, ecommerce site; or even developing novel smart contracts and complex scripts.
+((("development environment", "test blockchains and")))Litecoin's various blockchains (+regtest+, +segnet+, +testnet4+, +mainnet+) offer a range of testing environments for litecoin development. Use the test blockchains whether you are developing for Litecoin Core, or another full-node consensus client; an application such as a wallet, exchange, ecommerce site; or even developing novel smart contracts and complex scripts.
 
 You can use the test blockchains to establish a development pipeline. Test your code locally on a +regtest+ as you develop it. Once you are ready to try it on a public network, switch to +testnet+ to expose your code to a more dynamic environment with more diversity of code and applications. Finally, once you are confident your code works as expected, switch to +mainnet+ to deploy it in production. As you make changes, improvements, bug fixes, etc., start the pipeline again, deploying each change first on +regtest+, then on +testnet+, and finally into production.((("", startref="BCTtest09")))
