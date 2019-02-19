@@ -3,13 +3,13 @@
 == pycoin, ku, and tx
 
 
-((("pycoin library")))The Python library http://github.com/richardkiss/pycoin[+pycoin+], originally written and maintained by Richard Kiss, is a Python-based library that supports manipulation of bitcoin keys and transactions, even supporting the scripting language enough to properly deal with nonstandard transactions.
+((("pycoin library")))The Python library http://github.com/richardkiss/pycoin[+pycoin+], originally written and maintained by Richard Kiss, is a Python-based library that supports manipulation of litecoin keys and transactions, even supporting the scripting language enough to properly deal with nonstandard transactions.
 
 The pycoin library supports both Python 2 (2.7.x) and Python 3 (3.3 and later) and comes with some handy command-line utilities, +ku+ and +tx+.
 
 === Key Utility (KU)
 
-((("key utility (ku)", id="keyutil17")))The command-line utility +ku+ ("key utility") is a Swiss Army knife for manipulating keys. It supports BIP-32 keys, WIF, and addresses (bitcoin and alt coins). Following are some examples.
+((("key utility (ku)", id="keyutil17")))The command-line utility +ku+ ("key utility") is a Swiss Army knife for manipulating keys. It supports BIP-32 keys, WIF, and addresses (litecoin, bitcoin, and other alt coins). Following are some examples.
 
 Create a BIP-32 key using the default entropy sources of GPG and _/dev/random_:
 
