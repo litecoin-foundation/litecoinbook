@@ -756,46 +756,25 @@ Our example code calculates that the total value transacted in this block is 10,
 [[alt_libraries]]
 === Alternative Clients, Libraries, and Toolkits
 
-((("Bitcoin Core", "alternatives to", id="BCalt03")))((("clients, libraries, and toolkits", id="clients03")))((("libraries, clients, and toolkits", id="librar03")))((("toolkits, libraries, and clients", id="toolkit03")))((("third-party API clients", id="thirdpart03")))There are many alternative clients, libraries, toolkits, and even full-node implementations in the bitcoin ecosystem. These are implemented in a variety of programming languages, offering programmers native interfaces in their preferred language.
+((("Litecoin Core", "alternatives to", id="BCalt03")))((("clients, libraries, and toolkits", id="clients03")))((("libraries, clients, and toolkits", id="librar03")))((("toolkits, libraries, and clients", id="toolkit03")))((("third-party API clients", id="thirdpart03")))There are many alternative clients, libraries, toolkits, and even full-node implementations in the bitcoin ecosystem. These are implemented in a variety of programming languages, offering programmers native interfaces in their preferred language.
 
 The following sections list some of the best libraries, clients, and toolkits, organized by programming languages.
 
 ==== C/C++
-https://github.com/bitcoin/bitcoin[Bitcoin Core] :: The reference implementation of bitcoin
-https://github.com/libbitcoin/libbitcoin[libbitcoin]:: Cross-platform C++ development toolkit, node, and consensus library
-https://github.com/libbitcoin/libbitcoin-explorer[bitcoin explorer]:: Libbitcoin's command-line tool
-https://github.com/jgarzik/picocoin[picocoin]:: A C language lightweight client library for bitcoin by Jeff Garzik
+https://github.com/litecoin-project/litecoin[Litecoin Core] :: The reference implementation of Litecoin
 
 ==== JavaScript
-http://bcoin.io/[bcoin]:: A modular and scalable full-node implementation with API
-https://bitcore.io/[Bitcore] :: Full node, API, and library by Bitpay
-https://github.com/bitcoinjs/bitcoinjs-lib[BitcoinJS] :: A pure JavaScript Bitcoin library for node.js and browsers
+https://github.com/bcoin-org/lcoin[lcoin]:: A modular and scalable full-node implementation with API
+https://github.com/litecoin-project/litecore-lib/[Litecore] :: Full node, API, and library
+https://www.npmjs.com/package/litecoinjs[LitecoinJS] :: A pure JavaScript Litecoin library for node.js and browsers
 
 ==== Java
-https://bitcoinj.github.io[bitcoinj]:: A Java full-node client library
-https://bitsofproof.com[Bits of Proof (BOP)]:: A Java enterprise-class implementation of bitcoin
-
-==== PHP
-https://github.com/bit-wasp/bitcoin-php[bitwasp/bitcoin]:: A PHP bitcoin library, and related projects
+https://github.com/litecoin-project/litecoinj[litecoinj]:: A Java full-node client library
 
 ==== Python
-https://github.com/petertodd/python-bitcoinlib[python-bitcoinlib]::  A Python bitcoin library, consensus library, and node by Peter Todd
-https://github.com/richardkiss/pycoin[pycoin]:: A Python bitcoin library by Richard Kiss
-https://github.com/vbuterin/pybitcointools[pybitcointools]:: A Python bitcoin library by Vitalik Buterin
-
-==== Ruby
-https://github.com/sinisterchipmunk/bitcoin-client[bitcoin-client]:: A Ruby library wrapper for the JSON-RPC API
+https://github.com/richardkiss/pycoin[pycoin]:: A Python litecoin library by Richard Kiss
 
 ==== Go
-https://github.com/btcsuite/btcd[btcd]:: A Go language full-node bitcoin client
-
-==== Rust
-https://github.com/apoelstra/rust-bitcoin[rust-bitcoin]:: Rust bitcoin library for serialization, parsing, and API calls
-
-==== C#
-https://github.com/MetacoSA/NBitcoin[NBitcoin]:: Comprehensive bitcoin library for the .NET framework
-
-==== Objective-C
-https://github.com/oleganza/CoreBitcoin[CoreBitcoin]:: Bitcoin toolkit for ObjC and Swift
+https://github.com/ltcsuite/ltcd[ltcd]:: A Go language full-node litecoin client
 
 Many more libraries exist in a variety of other programming languages and more are created all the time.((("", startref="BCalt03")))((("", startref="clients03")))((("", startref="thirdpart03")))((("", startref="toolkit03")))((("", startref="librar03")))
